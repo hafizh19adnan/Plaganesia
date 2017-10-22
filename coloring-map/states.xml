@@ -1,0 +1,395 @@
+<states>
+<state name ='Yogyakarta' colour='#ff0000' >
+<point lat='  -7.64583' lng='110.1408'/>
+<point lat='-7.6466' lng='110.1562'/>
+<point lat='-7.64936' lng='110.1739'/>
+<point lat='-7.64396' lng='110.1922'/>
+<point lat='-7.64881' lng='110.2028'/>
+<point lat='-7.64749' lng='110.2122'/>
+<point lat='-7.65091' lng='110.2286'/>
+<point lat='-7.65366' lng='110.2415'/>
+<point lat='-7.64532' lng='110.2487'/>
+<point lat='-7.64115' lng='110.2557'/>
+<point lat='-7.64689' lng='110.2653'/>
+<point lat='-7.65147' lng='110.2643'/>
+<point lat='-7.65818' lng='110.2632'/>
+<point lat='-7.66323' lng='110.2677'/>
+<point lat='-7.68644' lng='110.2639'/>
+<point lat='-7.70557' lng='110.2710'/>
+<point lat='-7.65808' lng='110.3011'/>
+<point lat='-7.64514' lng='110.3235'/>
+<point lat='-7.62948' lng='110.3410'/>
+<point lat='-7.6104' lng='110.3726'/>
+<point lat='-7.59133' lng='110.3947'/>
+<point lat='-7.57226' lng='110.4070'/>
+<point lat='-7.55455' lng='110.4239'/>
+<point lat='-7.54365' lng='110.4469'/>
+<point lat='-7.57562' lng='110.4600'/>
+<point lat='-7.64265' lng='110.4714'/>
+<point lat='-7.69249' lng='110.4805'/>
+<point lat='-7.72728' lng='110.4883'/>
+<point lat='-7.74535' lng='110.4920'/>
+<point lat='-7.76682' lng='110.4919'/>
+<point lat='-7.76869' lng='110.5003'/>
+<point lat='-7.76818' lng='110.5063'/>
+<point lat='-7.77209' lng='110.5115'/>
+<point lat='-7.77693' lng='110.5113'/>
+<point lat='-7.78276' lng='110.5219'/>
+<point lat='-7.78975' lng='110.5295'/>
+<point lat='-7.79563' lng='110.5330'/>
+<point lat='-7.79398' lng='110.5430'/>
+<point lat='-7.79009' lng='110.5556'/>
+<point lat='-7.78372' lng='110.5570'/>
+<point lat='-7.78348' lng='110.5626'/>
+<point lat='-7.78977' lng='110.5830'/>
+<point lat='-7.79529' lng='110.5849'/>
+<point lat='-7.8018' lng='110.5780'/>
+<point lat='-7.80675' lng='110.5763'/>
+<point lat='-7.80264' lng='110.5863'/>
+<point lat='-7.8039' lng='110.5874'/>
+<point lat='-7.80597' lng='110.5879'/>
+<point lat='-7.80829' lng='110.5850'/>
+<point lat='-7.80859' lng='110.5865'/>
+<point lat='-7.80755' lng='110.5886'/>
+<point lat='-7.80635' lng='110.5941'/>
+<point lat='-7.79982' lng='110.6011'/>
+<point lat='-7.79822' lng='110.6084'/>
+<point lat='-7.79857' lng='110.6117'/>
+<point lat='-7.80197' lng='110.6158'/>
+<point lat='-7.80089' lng='110.6175'/>
+<point lat='-7.79904' lng='110.6187'/>
+<point lat='-7.79931' lng='110.6207'/>
+<point lat='-7.80036' lng='110.6226'/>
+<point lat='-7.80163' lng='110.6247'/>
+<point lat='-7.80294' lng='110.6250'/>
+<point lat='-7.80344' lng='110.6253'/>
+<point lat='-7.80071' lng='110.6290'/>
+<point lat='-7.8012' lng='110.6304'/>
+<point lat='-7.80085' lng='110.6360'/>
+<point lat='-7.7997' lng='110.6400'/>
+<point lat='-7.79752' lng='110.6439'/>
+<point lat='-7.79534' lng='110.6472'/>
+<point lat='-7.79698' lng='110.6482'/>
+<point lat='-7.79801' lng='110.6500'/>
+<point lat='-7.7998' lng='110.6509'/>
+<point lat='-7.80337' lng='110.6582'/>
+<point lat='-7.79439' lng='110.6643'/>
+<point lat='-7.78746' lng='110.6691'/>
+<point lat='-7.78597' lng='110.6743'/>
+<point lat='-7.79203' lng='110.6766'/>
+<point lat='-7.79779' lng='110.6726'/>
+<point lat='-7.80338' lng='110.672 '/>
+<point lat='-7.80788' lng='110.6895'/>
+<point lat='-7.80561' lng='110.7055'/>
+<point lat='-7.80124' lng='110.7141'/>
+<point lat='-7.79346' lng='110.7123'/>
+<point lat='-7.79408' lng='110.7217'/>
+<point lat='-7.79983' lng='110.7295'/>
+<point lat='-7.80576' lng='110.7419'/>
+<point lat='-7.8115' lng='110.7427'/>
+<point lat='-7.81877' lng='110.7463'/>
+<point lat='-7.81915' lng='110.7517'/>
+<point lat='-7.82359' lng='110.7520'/>
+<point lat='-7.82751' lng='110.7577'/>
+<point lat='-7.82301' lng='110.7636'/>
+<point lat='-7.81888' lng='110.7645'/>
+<point lat='-7.81682' lng='110.7624'/>
+<point lat='-7.81544' lng='110.7638'/>
+<point lat='-7.80961' lng='110.7645'/>
+<point lat='-7.80815' lng='110.7716'/>
+<point lat='-7.8135' lng='110.7768'/>
+<point lat='-7.81714' lng='110.7865'/>
+<point lat='-7.84469' lng='110.7833'/>
+<point lat='-7.85089' lng='110.7871'/>
+<point lat='-7.85574' lng='110.7868'/>
+<point lat='-7.87074' lng='110.7836'/>
+<point lat='-7.87825' lng='110.7788'/>
+<point lat='-7.89255' lng='110.7769'/>
+<point lat='-7.9028' lng='110.7705'/>
+<point lat='-7.91608' lng='110.7698'/>
+<point lat='-7.92714' lng='110.7722'/>
+<point lat='-7.95035' lng='110.7706'/>
+<point lat='-7.98576' lng='110.7681'/>
+<point lat='-7.99496' lng='110.7603'/>
+<point lat='-8.00364' lng='110.7612'/>
+<point lat='-8.01478' lng='110.7555'/>
+<point lat='-8.02137' lng='110.7533'/>
+<point lat='-8.02864' lng='110.7567'/>
+<point lat='-8.05923' lng='110.7729'/>
+<point lat='-8.06943' lng='110.7796'/>
+<point lat='-8.08438' lng='110.7792'/>
+<point lat='-8.10307' lng='110.7876'/>
+<point lat='-8.12636' lng='110.7901'/>
+<point lat='-8.13511' lng='110.7867'/>
+<point lat='-8.14278' lng='110.7856'/>
+<point lat='-8.15146' lng='110.7866'/>
+<point lat='-8.15831' lng='110.7910'/>
+<point lat='-8.16177' lng='110.7958'/>
+<point lat='-8.16135' lng='110.8022'/>
+<point lat='-8.1555' lng='110.8092'/>
+<point lat='-8.14728' lng='110.8122'/>
+<point lat='-8.14279' lng='110.8179'/>
+<point lat='-8.15454' lng='110.8166'/>
+<point lat='-8.15787' lng='110.8185'/>
+<point lat='-8.16072' lng='110.8232'/>
+<point lat='-8.16877' lng='110.8261'/>
+<point lat='-8.17484' lng='110.8342'/>
+<point lat='-8.18144' lng='110.8326'/>
+<point lat='-8.18831' lng='110.8344'/>
+<point lat='-8.19055' lng='110.8344'/>
+<point lat='-8.1932' lng='110.8305'/>
+<point lat='-8.19589' lng='110.8290'/>
+<point lat='-8.20206' lng='110.8295'/>
+<point lat='-8.20167' lng='110.7079'/>
+<point lat='-8.13468' lng='110.5355'/>
+<point lat='-8.07036' lng='110.3736'/>
+<point lat='-8.05574' lng='110.3592'/>
+<point lat='-8.02989' lng='110.3410'/>
+<point lat='-8.019' lng='110.3128'/>
+<point lat='-8.00812' lng='110.2674'/>
+<point lat='-7.99247' lng='110.2268'/>
+<point lat='-7.97029' lng='110.1847'/>
+<point lat='-7.94675' lng='110.1446'/>
+<point lat='-7.90918' lng='110.0562'/>
+<point lat='-7.89329' lng='110.0171'/>
+<point lat='-7.89237' lng='110.0147'/>
+<point lat='-7.89054' lng='110.0139'/>
+<point lat='-7.89118' lng='110.0169'/>
+<point lat='-7.8916' lng='110.0195'/>
+<point lat='-7.89174' lng='110.0207'/>
+<point lat='-7.89097' lng='110.0207'/>
+<point lat='-7.89095' lng='110.0211'/>
+<point lat='-7.89082' lng='110.0216'/>
+<point lat='-7.89074' lng='110.0233'/>
+<point lat='-7.89062' lng='110.0237'/>
+<point lat='-7.89059' lng='110.0240'/>
+<point lat='-7.89023' lng='110.0226'/>
+<point lat='-7.89065' lng='110.025 '/>
+<point lat='-7.89091' lng='110.0258'/>
+<point lat='-7.89119' lng='110.0269'/>
+<point lat='-7.89143' lng='110.0277'/>
+<point lat='-7.89195' lng='110.0287'/>
+<point lat='-7.89271' lng='110.0293'/>
+<point lat='-7.89343' lng='110.0294'/>
+<point lat='-7.89428' lng='110.0294'/>
+<point lat='-7.89508' lng='110.0294'/>
+<point lat='-7.89565' lng='110.0296'/>
+<point lat='-7.89613' lng='110.0298'/>
+<point lat='-7.89674' lng='110.0305'/>
+<point lat='-7.8967' lng='110.031 '/>
+<point lat='-7.89643' lng='110.0314'/>
+<point lat='-7.89537' lng='110.0319'/>
+<point lat='-7.89519' lng='110.0318'/>
+<point lat='-7.89485' lng='110.0319'/>
+<point lat='-7.89424' lng='110.0320'/>
+<point lat='-7.89273' lng='110.0322'/>
+<point lat='-7.89194' lng='110.0323'/>
+<point lat='-7.89105' lng='110.0324'/>
+<point lat='-7.888' lng='110.0327'/>
+<point lat='-7.88705' lng='110.0331'/>
+<point lat='-7.88636' lng='110.0337'/>
+<point lat='-7.87943' lng='110.0429'/>
+<point lat='-7.86891' lng='110.0448'/>
+<point lat='-7.86896' lng='110.0438'/>
+<point lat='-7.86793' lng='110.0433'/>
+<point lat='-7.86771' lng='110.0429'/>
+<point lat='-7.86722' lng='110.0432'/>
+<point lat='-7.86678' lng='110.0431'/>
+<point lat='-7.86665' lng='110.0429'/>
+<point lat='-7.86609' lng='110.0429'/>
+<point lat='-7.86386' lng='110.0425'/>
+<point lat='-7.86351' lng='110.0424'/>
+<point lat='-7.86322' lng='110.0425'/>
+<point lat='-7.86236' lng='110.0429'/>
+<point lat='-7.8615' lng='110.0434'/>
+<point lat='-7.86139' lng='110.0442'/>
+<point lat='-7.86159' lng='110.0448'/>
+<point lat='-7.86048' lng='110.0449'/>
+<point lat='-7.86018' lng='110.0449'/>
+<point lat='-7.85998' lng='110.0446'/>
+<point lat='-7.85982' lng='110.0436'/>
+<point lat='-7.85975' lng='110.0436'/>
+<point lat='-7.85905' lng='110.0441'/>
+<point lat='-7.85854' lng='110.0448'/>
+<point lat='-7.85784' lng='110.0456'/>
+<point lat='-7.85738' lng='110.0456'/>
+<point lat='-7.85622' lng='110.0466'/>
+<point lat='-7.85451' lng='110.0473'/>
+<point lat='-7.85412' lng='110.0481'/>
+<point lat='-7.85148' lng='110.0508'/>
+<point lat='-7.84915' lng='110.0508'/>
+<point lat='-7.84739' lng='110.0503'/>
+<point lat='-7.84639' lng='110.0502'/>
+<point lat='-7.84536' lng='110.0508'/>
+<point lat='-7.84474' lng='110.0512'/>
+<point lat='-7.84269' lng='110.0548'/>
+<point lat='-7.84205' lng='110.0560'/>
+<point lat='-7.84201' lng='110.0565'/>
+<point lat='-7.84207' lng='110.0573'/>
+<point lat='-7.84131' lng='110.0594'/>
+<point lat='-7.83344' lng='110.0584'/>
+<point lat='-7.82404' lng='110.0594'/>
+<point lat='-7.81967' lng='110.0606'/>
+<point lat='-7.81358' lng='110.0620'/>
+<point lat='-7.81223' lng='110.0707'/>
+<point lat='-7.81156' lng='110.0740'/>
+<point lat='-7.80646' lng='110.0795'/>
+<point lat='-7.80527' lng='110.0810'/>
+<point lat='-7.79992' lng='110.0831'/>
+<point lat='-7.79707' lng='110.0874'/>
+<point lat='-7.79071' lng='110.0896'/>
+<point lat='-7.78532' lng='110.0928'/>
+<point lat='-7.7845' lng='110.0943'/>
+<point lat='-7.78035' lng='110.1008'/>
+<point lat='-7.77878' lng='110.1025'/>
+<point lat='-7.77783' lng='110.1096'/>
+<point lat='-7.77667' lng='110.1120'/>
+<point lat='-7.77405' lng='110.1117'/>
+<point lat='-7.77007' lng='110.1141'/>
+<point lat='-7.76572' lng='110.1139'/>
+<point lat='-7.76327' lng='110.1151'/>
+<point lat='-7.76082' lng='110.1172'/>
+<point lat='-7.75548' lng='110.1216'/>
+<point lat='-7.75153' lng='110.1249'/>
+<point lat='-7.74886' lng='110.1262'/>
+<point lat='-7.74726' lng='110.1297'/>
+<point lat='-7.74328' lng='110.1302'/>
+<point lat='-7.74061' lng='110.1305'/>
+<point lat='-7.74063' lng='110.1321'/>
+<point lat='-7.73924' lng='110.1319'/>
+<point lat='-7.73483' lng='110.1323'/>
+<point lat='-7.73252' lng='110.1311'/>
+<point lat='-7.73021' lng='110.1313'/>
+<point lat='-7.72759' lng='110.1315'/>
+<point lat='-7.72523' lng='110.1319'/>
+<point lat='-7.72328' lng='110.1333'/>
+<point lat='-7.7215' lng='110.1344'/>
+<point lat='-7.72042' lng='110.1345'/>
+<point lat='-7.71971' lng='110.1342'/>
+<point lat='-7.71905' lng='110.1338'/>
+<point lat='-7.71813' lng='110.1331'/>
+<point lat='-7.7165' lng='110.1325'/>
+<point lat='-7.71596' lng='110.1325'/>
+<point lat='-7.71473' lng='110.1327'/>
+<point lat='-7.71387' lng='110.1333'/>
+<point lat='-7.71126' lng='110.1337'/>
+<point lat='-7.70567' lng='110.1349'/>
+<point lat='-7.70441' lng='110.1342'/>
+<point lat='-7.70345' lng='110.1321'/>
+<point lat='-7.70177' lng='110.131 '/>
+<point lat='-7.70049' lng='110.1311'/>
+<point lat='-7.69963' lng='110.1320'/>
+<point lat='-7.69842' lng='110.1329'/>
+<point lat='-7.69692' lng='110.1339'/>
+<point lat='-7.69502' lng='110.1356'/>
+<point lat='-7.69322' lng='110.1380'/>
+<point lat='-7.69005' lng='110.1365'/>
+<point lat='-7.68754' lng='110.1355'/>
+<point lat='-7.68526' lng='110.1327'/>
+<point lat='-7.68338' lng='110.1310'/>
+<point lat='-7.6827' lng='110.1276'/>
+<point lat='-7.68212' lng='110.1269'/>
+<point lat='-7.68061' lng='110.1265'/>
+<point lat='-7.67968' lng='110.1265'/>
+<point lat='-7.67884' lng='110.1270'/>
+<point lat='-7.6775' lng='110.1269'/>
+<point lat='-7.67732' lng='110.1257'/>
+<point lat='-7.67662' lng='110.1252'/>
+<point lat='-7.67657' lng='110.1234'/>
+<point lat='-7.67469' lng='110.1218'/>
+<point lat='-7.67247' lng='110.1209'/>
+<point lat='-7.67072' lng='110.1192'/>
+<point lat='-7.66981' lng='110.1181'/>
+<point lat='-7.65918' lng='110.1284'/>
+<point lat='-7.65234' lng='110.1363'/>
+</state>
+<state name="Jatim" colour="red">
+	<point lat=' -5.48647' lng='112.57'/>
+<point lat=' -6.49578' lng='112.07'/>
+<point lat=' -6.36887' lng='111.96'/>
+<point lat=' -6.74814' lng='111.66'/>
+<point lat=' -6.81271' lng='111.66'/>
+<point lat=' -6.81728' lng='111.61'/>
+<point lat=' -6.90093' lng='111.60'/>
+<point lat=' -6.91822' lng='111.58'/>
+<point lat=' -6.95957' lng='111.58'/>
+<point lat=' -6.97752' lng='111.62'/>
+<point lat=' -7.0601' lng='111.63'/>
+<point lat=' -7.16992' lng='111.60'/>
+<point lat=' -7.2192' lng='111.53'/>
+<point lat=' -7.25196' lng='111.45'/>
+<point lat=' -7.30374' lng='111.42'/>
+<point lat=' -7.36096' lng='111.45'/>
+<point lat=' -7.3392' lng='111.41'/>
+<point lat=' -7.31753' lng='111.35'/>
+<point lat=' -7.24717' lng='111.22'/>
+<point lat=' -7.24268' lng='111.17'/>
+<point lat=' -7.28859' lng='111.14'/>
+<point lat=' -7.36875' lng='111.14'/>
+<point lat=' -7.41155' lng='111.12'/>
+<point lat=' -7.50336' lng='111.16'/>
+<point lat=' -7.56558' lng='111.15'/>
+<point lat=' -7.6103' lng='111.20'/>
+<point lat=' -7.68166' lng='111.18'/>
+<point lat=' -7.72822' lng='111.22'/>
+<point lat=' -7.73517' lng='111.29'/>
+<point lat=' -7.78491' lng='111.28'/>
+<point lat=' -7.85059' lng='111.32'/>
+<point lat=' -7.92695' lng='111.27'/>
+<point lat=' -7.94394' lng='111.24'/>
+<point lat=' -7.92964' lng='111.23'/>
+<point lat=' -7.92145' lng='111.22'/>
+<point lat=' -7.93197' lng='111.21'/>
+<point lat=' -7.93432' lng='111.20'/>
+<point lat=' -7.924' lng='111.19'/>
+<point lat=' -7.91425' lng='111.18'/>
+<point lat=' -7.91923' lng='111.16'/>
+<point lat=' -7.93114' lng='111.15'/>
+<point lat=' -7.94951' lng='111.15'/>
+<point lat=' -7.9645' lng='111.14'/>
+<point lat=' -7.96724' lng='111.13'/>
+<point lat=' -7.99183' lng='111.13'/>
+<point lat=' -8.00485' lng='111.13'/>
+<point lat=' -8.01074' lng='111.14'/>
+<point lat=' -8.02139' lng='111.14'/>
+<point lat=' -8.03337' lng='111.13'/>
+<point lat=' -8.05938' lng='111.13'/>
+<point lat=' -8.05178' lng='111.11'/>
+<point lat=' -8.05641' lng='111.09'/>
+<point lat=' -8.031' lng='111.09'/>
+<point lat=' -8.02352' lng='111.09'/>
+<point lat=' -8.01876' lng='111.08'/>
+<point lat=' -8.02827' lng='111.07'/>
+<point lat=' -8.04595' lng='111.07'/>
+<point lat=' -8.05682' lng='111.07'/>
+<point lat=' -8.06905' lng='111.06'/>
+<point lat=' -8.07309' lng='111.02'/>
+<point lat=' -8.06895' lng='110.98'/>
+<point lat=' -8.05795' lng='110.96'/>
+<point lat=' -8.21539' lng='110.88'/>
+<point lat=' -8.28588' lng='111.14'/>
+<point lat=' -8.28569' lng='111.33'/>
+<point lat=' -8.37229' lng='111.70'/>
+<point lat=' -8.31485' lng='111.88'/>
+<point lat=' -8.35135' lng='112.25'/>
+<point lat=' -8.46392' lng='112.63'/>
+<point lat=' -8.34671' lng='113.08'/>
+<point lat=' -8.50547' lng='113.25'/>
+<point lat=' -8.58812' lng='113.66'/>
+<point lat=' -8.72759' lng='114.18'/>
+<point lat=' -8.82716' lng='114.46'/>
+<point lat=' -8.75844' lng='114.66'/>
+<point lat=' -8.53167' lng='114.47'/>
+<point lat=' -8.38901' lng='114.33'/>
+<point lat=' -8.18511' lng='114.38'/>
+<point lat=' -7.88582' lng='114.44'/>
+<point lat=' -7.28193' lng='115.13'/>
+<point lat=' -7.34484' lng='115.92'/>
+<point lat=' -6.84211' lng='115.93'/>
+<point lat=' -6.77089' lng='115.23'/>
+<point lat=' -6.8524' lng='114.48'/>
+<point lat=' -6.60948' lng='113.57'/>
+<point lat=' -6.42104' lng='113.04'/>
+<point lat=' -5.89385' lng='112.93'/>
+</state>
+</states>
