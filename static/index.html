@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Plaganesia</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!--JS-->
+    <script type="text/javascript" src="src/js/jquery-3.1.0.min.js"></script>
+    <script src="src/libs/materialize/js/materialize.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('select').material_select();
+
+        $('.datepicker').pickadate({
+          selectMonths: true, // Creates a dropdown to control month
+          selectYears: 15, // Creates a dropdown of 15 years to control year
+          format: 'dd/mm/yyyy'
+        });
+
+        // MODAL
+        $('.modal').modal();
+        // DROPDOWNS
+        $(".dropdown-button").dropdown(
+          {
+            belowOrigin: true
+          }
+        );
+        // TABS
+        $('ul.tabs').tabs();
+        // SCROLLSPY
+        $('.scrollspy').scrollSpy();
+        //SIDENAV
+        $(".button-collapse").sideNav();
+            });
+    </script>
+</head>
+<body>
+
+  <nav class=" white darken-2" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">
+        <img class="responsive-img" style="margin-top:15px;" src="asset/img/logo-horizontal.png" align="logo">
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html" class="grey-text active">Beranda</a></li>
+        <li><a href="" class="grey-text">Berita</a></li>
+        <li><a href="" class="grey-text">Pemetaan</a></li>
+        <li><a href="" class="grey-text">Login</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="index.html" class="cyan-text">Beranda</a></li>
+        <li><a href="" class="cyan-text">Berita</a></li>
+        <li><a href="" class="cyan-text">Pemetaan</a></li>
+        <li><a href="" class="cyan-text">Login</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse grey-text"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h4 class="header center white-text text-lighten-4" style="margin-top:12%;">Portal Informasi Pemetaan Wabah Pertama di Indonesia</h4>
+        <div class="row center">
+          <h5 style="margin-top:-1%;" class="header col s12 light">Temukan informasi seputar wabah, pemetaannya, dan penanggulangannya disini</h5>
+        </div>
+        <div class="row center">
+         <a class="waves-effect waves-light btn-large teal lighten-2" href="kursus.html">LIHAT PEMETAAN</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="asset/img/background-1.png" alt="Unsplashed background img 1"></div>
+  </div>
+
+  <br><br>
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="asset/img/card-1.png">
+              <span class="card-title"></span>
+            </div>
+            <div class="card-content">
+              <div class="row center">
+                <h5>Peta Wabah</h5><br>
+                <div class="row center">
+                 <a class="waves-effect waves-light btn teal lighten-2" href="">Lihat Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="asset/img/card-2.png">
+              <span class="card-title"></span>
+            </div>
+            <div class="card-content">
+              <div class="row center">
+                <h5>Pengumuman</h5><br>
+                <div class="row center">
+                 <a class="waves-effect waves-light btn teal lighten-2" href="">Lihat Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="asset/img/card-3.png">
+              <span class="card-title"></span>
+            </div>
+            <div class="card-content">
+              <div class="row center">
+                <h5>Info Penyakit</h5><br>
+                <div class="row center">
+                 <a class="waves-effect waves-light btn teal lighten-2" href="kursus.html">Lihat Selengkapnya</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="row">
+        <div class="col s12">
+          <div class="center">
+            <h4 class="header">Berita dan Pengumuman</h4><hr><br>  
+          </div>
+        
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="https://lorempixel.com/100/190/nature/6">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5>JUDUL BERITA</h5>
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="https://lorempixel.com/100/190/nature/6">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5>JUDUL BERITA</h5>
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="https://lorempixel.com/100/190/nature/6">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+              <h5>JUDUL BERITA</h5>
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Butuh Bantuan ?</h5>
+          <p class="grey-text text-lighten-4">Kirim email ke kami</p>
+          <p class="grey-text text-lighten-4">admin@plaganesia.com</p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Informasi Lain</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Tentang</a></li>
+            <li><a class="white-text" href="#!">FAQ</a></li>
+            <li><a class="white-text" href="#!">Situs Kemenkes</a></li>
+            <li><a class="white-text" href="#!">Situs Pusdatin Kemenkes</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Ikuti Kami</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Facebook</a></li>
+            <li><a class="white-text" href="#!">Twitter</a></li>
+            <li><a class="white-text" href="#!">Instagram</a></li>
+            <li><a class="white-text" href="#!">Google+</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
