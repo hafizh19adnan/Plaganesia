@@ -58,7 +58,7 @@
                pts[i] = new GLatLng(parseFloat(points[i].getAttribute("lat")),
                                    parseFloat(points[i].getAttribute("lng")));
             }
-            var poly = new GPolygon(pts,"#000000",0.1,1,colour,0.8,{clickable:false});
+            var poly = new GPolygon(pts,"#000000",0.1,1,colour,0.5,{clickable:false});
             polys.push(poly);
             labels.push(label);
             map.addOverlay(poly);
