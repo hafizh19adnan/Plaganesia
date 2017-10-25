@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Plaganesia</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!--JS-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="src/libs/materialize/js/materialize.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('select').material_select();
+
+        $('.datepicker').pickadate({
+          selectMonths: true, // Creates a dropdown to control month
+          selectYears: 15, // Creates a dropdown of 15 years to control year
+          format: 'dd/mm/yyyy'
+        });
+
+        // MODAL
+        $('.modal').modal();
+        // DROPDOWNS
+        $(".dropdown-button").dropdown(
+          {
+            belowOrigin: true
+          }
+        );
+        // TABS
+        $('ul.tabs').tabs();
+        // SCROLLSPY
+        $('.scrollspy').scrollSpy();
+        //SIDENAV
+        $(".button-collapse").sideNav();
+      
+         var legend = document.getElementById('legend');
+         var div = document.createElement('div');
+         div.innerHTML = '<img src="asset/img/sangat-rendah.PNG" style="height:10px; width: 60px;">&nbsp;Potensi Sangat Rendah<br>';
+         div.innerHTML += '<img src="asset/img/rendah.PNG" style="height:10px; width: 60px;">&nbsp;Potensi Rendah<br>';
+         div.innerHTML += '<img src="asset/img/tinggi.PNG" style="height:10px; width: 60px;">&nbsp;Potensi Tinggi<br>';
+         div.innerHTML += '<img src="asset/img/sangat-tinggi.PNG" style="height:10px; width: 60px;">&nbsp;Potensi Sangat Tinggi';
+         legend.appendChild(div);
+          map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
+      });
+
+    </script>
+</head>
+<body>
+
+  <nav class=" white darken-2" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">
+        <img class="responsive-img" style="margin-top:15px;" src="asset/img/logo-horizontal.png" align="logo">
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html" class="grey-text active">Beranda</a></li>
+        <li><a href="" class="grey-text">Berita</a></li>
+        <li><a href="" class="grey-text">Pemetaan</a></li>
+        <li><a href="" class="grey-text">Login</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="index.html" class="cyan-text">Beranda</a></li>
+        <li><a href="" class="cyan-text">Berita</a></li>
+        <li><a href="" class="cyan-text">Pemetaan</a></li>
+        <li><a href="" class="cyan-text">Login</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse grey-text"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+   <!--  <div class="container">
+      <div class="row center">
+        <h2>Peta Potensi Wabah</h2>
+      </div>
+    </div> -->
+
+    <div id="legend"></div>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -7.6996394, lng: 110.4885944},
+          zoom: 7
+        });
+      }
+    </script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyAB2MYlhFAITBFtFGI_LqGrVC3fxW277VQ&callback=initMap"
+    async defer></script>
+  
+   <br><br>
+
+     <div class="container">
+       <div id="squares">
+          <div id="pengidap" class="red lighten-1">             
+              <p>Jumlah Pengidap</p>
+              <h2>12345</h2>
+          </div>
+          <div id="mean_pengidap" class="orange lighten-1">
+              <p>Mean Umur Pengidap</p>
+              <h2>20</h2>
+          </div>
+          <div id="modus_pengidap" class="green accent-2">
+              <p>Modus Umur Pengidap</p>
+              <h2>20</h2>
+          </div>
+          <div id="margin_of_error" class="cyan">
+             <p>Margin of Error</p>
+              <h2>0.5%</h2>
+          </div>
+          <div id="5" class="deep-purple lighten-2">
+             <p>Provinsi dengan Pengidap Terbanyak</p>
+              <h4>BANTEN</h4>
+          </div>
+        </div>
+    
+      <div class="section">
+        <div class="row">
+        <div class="col s12">
+          <div class="center">
+            <br>
+            <h5 class="header">Detail Survey</h5><hr>
+            <div class="col s6 left-align">
+             Nama
+            </div>
+            <div class="col s6 left-align">
+              Survey Nasional Penyebaran DBD Agustus 2017
+             </div>
+            <div class="col s6 left-align">
+             Waktu
+            </div>
+            <div class="col s6 left-align">
+              10 Januari 2017 hingga 10 Januari 2018
+            </div>
+            <div class="col s6 left-align">
+             Jumlah Responden
+            </div>
+            <div class="col s6 left-align">
+            1234
+            </div>
+          </div><br><br><br><br>
+          <div class="center">
+            <h5 class="header">Data Pengidap DBD Semua Provinsi</h5><hr>
+            <table class="striped centered">
+              <thead>
+                <tr>
+                    <th>Provinsi</th>
+                    <th>Jumlah Penderita</th>
+                    <th>Persentase</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>DKI Jakarta</td>
+                  <td>1000</td>
+                  <td>0.1%</td>
+                </tr>
+                <tr>
+                  <td>Jawa Tengah</td>
+                  <td>1000</td>
+                  <td>0.1%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h5 class="header center">Rekomendasi</h5><hr>
+            <div class="rekomendasi">
+              <div class="col m4">
+                <img src="asset/img/card-2.png" style="height: 130px;" class="responsive-img">
+              </div>
+              <div class="col m8">
+                <h5>Fogging</h5>
+                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
+                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
+                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
+              </div>
+            </div>
+            <div class="rekomendasi">
+              <div class="col m4">
+                <img src="asset/img/card-2.png" style="height: 130px;" class="responsive-img">
+              </div>
+              <div class="col m8">
+                <h5>Fogging</h5>
+                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
+                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
+                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Butuh Bantuan ?</h5>
+          <p class="grey-text text-lighten-4">Kirim email ke kami</p>
+          <p class="grey-text text-lighten-4">admin@plaganesia.com</p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Informasi Lain</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Tentang</a></li>
+            <li><a class="white-text" href="#!">FAQ</a></li>
+            <li><a class="white-text" href="#!">Situs Kemenkes</a></li>
+            <li><a class="white-text" href="#!">Situs Pusdatin Kemenkes</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Ikuti Kami</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Facebook</a></li>
+            <li><a class="white-text" href="#!">Twitter</a></li>
+            <li><a class="white-text" href="#!">Instagram</a></li>
+            <li><a class="white-text" href="#!">Google+</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
