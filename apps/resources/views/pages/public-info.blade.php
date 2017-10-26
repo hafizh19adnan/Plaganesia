@@ -1,68 +1,6 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Plaganesia</title>
-
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
-  <!--JS-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-      <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=AIzaSyBfMIBkwmYD4dz9xcRPRufpL235yCQ7fl8" type="text/javascript"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-      $('.modal').modal();
-
-      $('#textarea1').trigger('autoresize');
-
-      $('.datepicker').pickadate({
-        format: 'yyyy-mm-dd',
-        selectMonths: true, // Creates a dropdown to control month
-        selectYears: 15, // Creates a dropdown of 15 years to control year,
-        today: 'Today',
-        clear: 'Clear',
-        close: 'Ok',
-        closeOnSelect: false // Close upon selecting a date,
-      });
-
-      $('select').material_select();
-        
-    });
-  </script>
-</head>
-<body class="">
-
-  <nav class=" white darken-2" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">
-        <img class="responsive-img" style="margin-top:15px;" src="asset/img/logo-horizontal.png" align="logo">
-      </a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="index.html" class="grey-text active">Beranda</a></li>
-        <li><a href="berita.html" class="grey-text">Berita</a></li>
-        <li><a href="peta-wabah.html" class="grey-text">Pemetaan</a></li>
-        <li><a href="login.html" class="grey-text">Login</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="index.html" class="cyan-text">Beranda</a></li>
-        <li><a href="berita.html" class="cyan-text">Berita</a></li>
-        <li><a href="peta-wabah.html" class="cyan-text">Pemetaan</a></li>
-        <li><a href="login.html" class="cyan-text">Login</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse grey-text"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-
-  <div class="section row" style="margin-top: -2%;">
+@extends('layouts.default')
+@section('content')
+<div class="section row" style="margin-top: -2%;">
         <div id="map" style="width: 100%; height: 600px"></div>
 
   </div>
@@ -132,7 +70,7 @@
                             <h3 class="card-stats-number">
                                 34
                             </h3>
-                            <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i><span class="blue-grey-text text-lighten-5"><?php echo $thisMonth; ?></span>
+                            <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i><span class="blue-grey-text text-lighten-5"></span>
                             </p>
                         </div>
                     </div>
@@ -267,48 +205,66 @@
       </div>
     </section>
   </div>
-
-
-  <footer class="page-footer teal">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Butuh Bantuan ?</h5>
-          <p class="grey-text text-lighten-4">Kirim email ke kami</p>
-          <p class="grey-text text-lighten-4">admin@plaganesia.com</p>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Informasi Lain</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Tentang</a></li>
-            <li><a class="white-text" href="#!">FAQ</a></li>
-            <li><a class="white-text" href="#!">Situs Kemenkes</a></li>
-            <li><a class="white-text" href="#!">Situs Pusdatin Kemenkes</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Ikuti Kami</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Facebook</a></li>
-            <li><a class="white-text" href="#!">Twitter</a></li>
-            <li><a class="white-text" href="#!">Instagram</a></li>
-            <li><a class="white-text" href="#!">Google+</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
-
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=AIzaSyBfMIBkwmYD4dz9xcRPRufpL235yCQ7fl8" type="text/javascript"></script>
   
+  <script type="text/javascript">
+    //<![CDATA[
 
-  <!--  Scripts-->
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+    if (GBrowserIsCompatible()) {
 
-  </body>
-</html>
+      var polys = [];
+      var labels = [];
+
+      // Display the map, with some controls and set the initial location 
+      var map = new GMap2(document.getElementById("map"));
+      map.addControl(new GLargeMapControl());
+      map.addControl(new GMapTypeControl());
+      map.setCenter(new GLatLng(-7.6074635,110.4723612),7);
+
+   
+
+      // Read the data from states.xml
+      
+      var request = GXmlHttp.create();
+      request.open("GET", "states.xml", true);
+      request.onreadystatechange = function() {
+        if (request.readyState == 4) {
+          var xmlDoc = GXml.parse(request.responseText);
+          
+          // ========= Now process the polylines ===========
+          var states = xmlDoc.documentElement.getElementsByTagName("state");
+
+          // read each line
+          for (var a = 0; a < states.length; a++) {
+            // get any state attributes
+            var label  = states[a].getAttribute("name");
+            var colour = states[a].getAttribute("colour");
+            // read each point on that line
+            var points = states[a].getElementsByTagName("point");
+            var pts = [];
+            for (var i = 0; i < points.length; i++) {
+               pts[i] = new GLatLng(parseFloat(points[i].getAttribute("lat")),
+                                   parseFloat(points[i].getAttribute("lng")));
+            }
+            var poly = new GPolygon(pts,"#000000",0.1,1,colour,0.5,{clickable:false});
+            polys.push(poly);
+            labels.push(label);
+            map.addOverlay(poly);
+          }
+          // ================================================           
+        }
+      }
+      request.send(null);
+
+    }
+    
+    // display a warning if the browser was not compatible
+    else {
+      alert("Sorry, the Google Maps API is not compatible with this browser");
+    }
+
+    </script>
+
+
+
+@stop

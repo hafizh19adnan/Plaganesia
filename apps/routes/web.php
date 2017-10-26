@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','baseController@index');
+Route::get('/home','baseController@index');
+Route::get('/view-peta','baseController@view_peta');
+Route::get('/berita','baseController@berita');
+Route::get('/public-info','baseController@public_info');
