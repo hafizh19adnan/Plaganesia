@@ -9,7 +9,7 @@
           <h5 style="margin-top:-1%;" class="header col s12 light">Temukan informasi seputar wabah, pemetaannya, dan penanggulangannya disini</h5>
         </div>
         <div class="row center">
-         <a class="waves-effect waves-light btn-large teal lighten-2" href="peta-wabah.html">LIHAT PEMETAAN</a>
+         <a class="waves-effect waves-light btn-large teal lighten-2" href="view-peta">LIHAT PEMETAAN</a>
         </div>
         <br><br>
 
@@ -32,7 +32,7 @@
               <div class="row center">
                 <h5>Peta Wabah</h5><br>
                 <div class="row center">
-                 <a class="waves-effect waves-light btn teal lighten-2" href="peta-wabah.html">Lihat Selengkapnya</a>
+                 <a class="waves-effect waves-light btn teal lighten-2" href="view-peta">Lihat Selengkapnya</a>
                 </div>
               </div>
             </div>

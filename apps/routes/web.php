@@ -18,3 +18,5 @@ Route::get('/berita','baseController@berita');
 Route::get('/public-info','baseController@public_info');
 Route::get('/dashboard-gov','baseController@dashboard_gov');
 Route::get('/login','baseController@login');
+Route::get('/tes','baseController@login');
+
