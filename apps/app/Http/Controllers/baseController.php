@@ -52,4 +52,12 @@ class baseController extends Controller
     public function buatSurvey() {
         return view("pages.survey");
     }
+
+    public function isiSurvey() {
+        return view("pages.isi-survey");
+    }
+
+    public function listSurveyOfSurveyor() {
+        return view("pages.list-survey");
+    }
 }
