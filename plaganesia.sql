@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 27, 2017 at 03:31 PM
+-- Generation Time: Oct 27, 2017 at 04:27 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -154,21 +154,22 @@ CREATE TABLE `rekomendasi` (
   `id` int(6) UNSIGNED NOT NULL,
   `judul` varchar(30) NOT NULL,
   `deskripsi` text NOT NULL,
-  `id_penyakit` int(6) UNSIGNED NOT NULL
+  `id_penyakit` int(6) UNSIGNED NOT NULL,
+  `level` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `rekomendasi`
 --
 
-INSERT INTO `rekomendasi` (`id`, `judul`, `deskripsi`, `id_penyakit`) VALUES
-(1, 'Fogging', 'Yukz difogging difogging tapi jangan pake vape', 1),
-(2, 'Sosialisasi 3M', 'Menutup Penampungan Air, Menguras Penampungan Air, Mengubur Barang Bekas', 1),
-(3, 'Pembagian Abate', 'Abate bubuk ajaib dari kantong Doraemon bisa bikin nyamuk semaput', 1),
-(4, 'Sosialisasi HIV', 'Jauhi narkoba', 2),
-(5, 'Pembagian Pil Kina', 'Kina wa omae no mirai desu you', 3),
-(6, 'Tim Cepat Tanggap', 'uhuk uhuk uhuk tau tau sembuh yeay', 4),
-(7, 'Sanatorium', 'uhuk uhuk uhuk tidur minum obat tau tau sembuh yeay', 4);
+INSERT INTO `rekomendasi` (`id`, `judul`, `deskripsi`, `id_penyakit`, `level`) VALUES
+(1, 'Fogging', 'Yukz difogging difogging tapi jangan pake vape', 1, 2),
+(2, 'Sosialisasi 3M', 'Menutup Penampungan Air, Menguras Penampungan Air, Mengubur Barang Bekas', 1, 3),
+(3, 'Pembagian Abate', 'Abate bubuk ajaib dari kantong Doraemon bisa bikin nyamuk semaput', 1, 2),
+(4, 'Sosialisasi HIV', 'Jauhi narkoba', 2, 3),
+(5, 'Pembagian Pil Kina', 'Kina wa omae no mirai desu you', 3, 1),
+(6, 'Tim Cepat Tanggap', 'uhuk uhuk uhuk tau tau sembuh yeay', 4, 1),
+(7, 'Sanatorium', 'uhuk uhuk uhuk tidur minum obat tau tau sembuh yeay', 4, 1);
 
 -- --------------------------------------------------------
 
