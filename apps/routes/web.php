@@ -19,4 +19,8 @@ Route::get('/public-info','baseController@public_info');
 Route::get('/dashboard-gov','baseController@dashboard_gov');
 Route::get('/login','baseController@login');
 Route::get('/tes','baseController@login');
+Route::get('/daftar-laporan','baseController@daftarLaporan');
+Route::get('/daftar-survey','baseController@daftarSurvey');
+Route::get('/buat-survey','baseController@buatSurvey');
+
 

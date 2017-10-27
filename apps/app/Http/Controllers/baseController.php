@@ -40,6 +40,16 @@ class baseController extends Controller
     public function login(){
         return view("pages.login-page");
     }
-   
 
+    public function daftarLaporan() {
+        return view("pages.daftar-laporan");
+    }
+
+    public function daftarSurvey() {
+        return view("pages.daftar-survey");
+    }
+   
+    public function buatSurvey() {
+        return view("pages.survey");
+    }
 }
