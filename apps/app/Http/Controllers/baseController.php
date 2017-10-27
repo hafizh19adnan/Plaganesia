@@ -34,6 +34,12 @@ class baseController extends Controller
         return view("pages.public-info");
     }
 
+    public function dashboard_gov(){
+        return view("pages.dashboard-gov");
+    }
+    public function login(){
+        return view("pages.login-page");
+    }
    
 
 }

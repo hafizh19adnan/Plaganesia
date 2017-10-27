@@ -1,8 +1,9 @@
 @extends('layouts.default')
 @section('content')
 
-  <div class="section row" style="margin-top: -2%;">
-    <iframe width="100%" height="600" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNzIy0n6gei4RYO2r1lkc_oY&key= AIzaSyDzA9JXK3o7Yv3_3kJ_yW-fVcQ87YLZdSg" allowfullscreen></iframe> 
+ <div class="section row" style="margin-top: -2%;">
+        <div id="map" style="width: 100%; height: 600px"></div>
+
   </div>
 
   <div class="container" style="position:absolute; left:21px; top:115px;">
@@ -26,4 +27,29 @@
       </div>
     </div>
   </div>
+
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=AIzaSyBfMIBkwmYD4dz9xcRPRufpL235yCQ7fl8" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    //<![CDATA[
+
+    if (GBrowserIsCompatible()) {
+
+      // Display the map, with some controls and set the initial location 
+      var map = new GMap2(document.getElementById("map"));
+      map.addControl(new GLargeMapControl());
+      map.addControl(new GMapTypeControl());
+      map.setCenter(new GLatLng(-7.6074635,110.4723612),7);
+
+      request.send(null);
+
+    }
+    
+    // display a warning if the browser was not compatible
+    else {
+      alert("Sorry, the Google Maps API is not compatible with this browser");
+    }
+
+    </script>
+
 @stop

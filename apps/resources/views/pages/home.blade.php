@@ -46,7 +46,7 @@
             </div>
             <div class="card-content">
               <div class="row center">
-                <h5>Berita dan Pengumuman</h5><br>
+                <h5>Himbauan dan Pengumuman</h5><br>
                 <div class="row center">
                  <a class="waves-effect waves-light btn teal lighten-2" href="berita.html">Lihat Selengkapnya</a>
                 </div>
@@ -72,105 +72,29 @@
         </div>
       </div>
     </div>
-    
-    <div class="section">
-      <div class="row">
-        <div class="col s12">
-          <div class="center">
-            <h4 class="header">Berita dan Pengumuman</h4><hr><br>  
-          </div>
-        
-          <div class="card horizontal">
-            <div class="card-image" style="width: 25%;">
-              <img src="asset/img/menteri-kesehatan.png">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <h5>JUDUL BERITA</h5>
-                <p>Ini isinya berita. Bisa dibaca sama pembaca yang sedang melihat berita ini. Banyak informasi yang bisa didapat.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card horizontal">
-            <div class="card-image" style="width: 25%;">
-              <img src="asset/img/menteri-kesehatan.png">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <h5>JUDUL BERITA</h5>
-                <p>Ini isinya berita. Bisa dibaca sama pembaca yang sedang melihat berita ini. Banyak informasi yang bisa didapat.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card horizontal">
-            <div class="card-image" style="width: 25%;">
-              <img src="asset/img/menteri-kesehatan.png">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <h5>JUDUL BERITA</h5>
-                <p>Ini isinya berita. Bisa dibaca sama pembaca yang sedang melihat berita ini. Banyak informasi yang bisa didapat.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card horizontal">
-            <div class="card-image" style="width: 25%;">
-              <img src="asset/img/menteri-kesehatan.png">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <h5>JUDUL BERITA</h5>
-                <p>Ini isinya berita. Bisa dibaca sama pembaca yang sedang melihat berita ini. Banyak informasi yang bisa didapat.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card horizontal">
-            <div class="card-image" style="width: 25%;">
-              <img src="asset/img/menteri-kesehatan.png">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <h5>JUDUL BERITA</h5>
-                <p>Ini isinya berita. Bisa dibaca sama pembaca yang sedang melihat berita ini. Banyak informasi yang bisa didapat.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="center">
-            <ul class="pagination">
-              <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-              <li class="active"><a href="#!">1</a></li>
-              <li class="waves-effect"><a href="#!">2</a></li>
-              <li class="waves-effect"><a href="#!">3</a></li>
-              <li class="waves-effect"><a href="#!">4</a></li>
-              <li class="waves-effect"><a href="#!">5</a></li>
-              <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-            </ul>
-          </div>
-          
-        </div>
-      </div>
-    </div>
   </div>
 
+  <section id="aspiration">
+    <div class="container">
+      <div class="col-md-12">
+        <h3 class="center">Laporkan Potensi Wabah</h3>
+      </div>
+      <div class="col-md-12">
+        <form>
+           <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">mode_edit</i>
+          <textarea style="height: 5rem" id="icon_prefix2" class="materialize-textarea" rows="9"></textarea>
+          <label for="icon_prefix2">Masukan Laporan</label>
+        </div>
+      </div>
+              <div class='row'>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Laporkan</button>
+              </div>
+        </form>
+      </div>
+    </div>
+  </section>    
+  
 
 @stop
