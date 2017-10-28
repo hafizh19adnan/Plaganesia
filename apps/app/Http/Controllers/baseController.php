@@ -39,7 +39,7 @@ class baseController extends Controller
 
         $pesan = "Laporan Berhasil dikirim";
 
-        DB::table('laporan')->insert(['nama_pelapor'=> $nama_pelapor, 'alamat'=>$alamat,'id_kabupaten'=>$id_kabupaten,'isi'=>$isi, ,'tgl_lapor'=>$tgl_lapor]);
+        DB::table('laporan')->insert(['nama_pelapor'=> $nama_pelapor, 'alamat'=>$alamat,'id_kabupaten'=>$id_kabupaten,'isi'=>$isi ,'tgl_lapor'=>$tgl_lapor]);
         return redirect("/");
     }
 
