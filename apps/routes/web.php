@@ -25,5 +25,7 @@ Route::get('/daftar-survey','baseController@daftarSurvey');
 Route::get('/buat-survey','baseController@buatSurvey');
 Route::get('/isi-survey','baseController@isiSurvey');
 Route::get('/list-survey','baseController@listSurveyOfSurveyor');
+Route::post('/login-action','baseController@loginAction');
+Route::get('/logout','baseController@logout');
 
 
