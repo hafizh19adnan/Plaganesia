@@ -15,36 +15,53 @@
       <div class="section">
         <div class="row">
           <form class="col s12">
+          {{ csrf_field() }}
+          <input name="nama" id="nama" type="hidden" value="" class="validate">
+          <input name="tgl_data" id="tgl_data" type="hidden" value="" class="validate">
             <div class="row">
               <div class="input-field col s12">
-                <input placeholder="Lintang Matahari" id="nama_survey" type="text" class="validate">
-                <label for="nama_survey">Nama Lengkap</label>
+                <input placeholder="Nama Responden" name="nama"  id="nama" type="text" class="validate">
+                <label for="nama">Nama Lengkap</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input placeholder="18" id="nama_survey" type="number" class="validate">
-                <label for="nama_survey">Usia</label>
+                <input placeholder="Usia (Tahun)" name="umur" id="umur" type="number" class="validate">
+                <label for="umur">Usia</label>
               </div>
             </div>
             <div class="row">
            <div class="input-field col s12">
-                <select>
+                <select name="gender" id="gender">
                   <option value="" disabled selected>Pilih Jenis Kelamin...</option>
                   <option value="L">Laki-Laki</option>
                   <option value="P">Perempuan</option>
                 </select>
-                <label for="last_name">Provinsi</label>
+                <label for="gender">Gender</label>
             </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                 <select>
+                 <select name="is_sakit" id="is_sakit">
                   <option value="" disabled selected>Pilih Status...</option>
                   <option value="true">Penderita</option>
                   <option value="false">Suspect</option>
                 </select>
-                <label for="nama_survey">Status</label>
+                <label for="is_sakit">Status Penyakit</label>
+              </div>
+            </div>
+            <div class="input-field col s12">
+                <input name="tgl_sakit" id="tgl_sakit" type="text" class="datepicker">
+                <label for="tgl_sakit">Tanggal Sakit</label>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                 <select name="is_meninggal" id="is_meninggal">
+                  <option value="" disabled selected>Pilih Status...</option>
+                  <option value="true">Meninggal</option>
+                  <option value="false">Hidup</option>
+                </select>
+                <label for="is_sakit">Status Kematian</label>
               </div>
             </div>
             <div class="row center">
@@ -62,7 +79,8 @@
     today: 'Today',
     clear: 'Clear',
     close: 'Ok',
-    closeOnSelect: false // Close upon selecting a date,
+    closeOnSelect: false, // Close upon selecting a date,
+    format: 'yyyy-mm-dd'
   });
 </script>
 @stop

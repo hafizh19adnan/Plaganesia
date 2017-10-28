@@ -13,6 +13,7 @@
 
 Route::get('/','baseController@index');
 Route::get('/home','baseController@index');
+Route::get('/addLaporan','baseController@addLaporan');
 Route::get('/view-peta','baseController@view_peta');
 Route::get('/berita','baseController@berita');
 Route::get('/public-info','baseController@public_info');
@@ -29,5 +30,6 @@ Route::post('/login-action','baseController@loginAction');
 Route::get('/logout','baseController@logout');
 Route::get('/dashboard-gov-jakarta','baseController@jakarta_gov');
 Route::post('/tambahSurvey', 'baseController@tambahSurvey');
+
 
 

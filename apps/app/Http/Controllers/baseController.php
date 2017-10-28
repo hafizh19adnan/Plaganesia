@@ -17,6 +17,7 @@ use Log;
 class baseController extends Controller
 {
     public function index(Request $request){
+
         if($request->session()->has('users')){
              if($request->session()->has('gov')){
                 return redirect('dashboard-pemerintah');
@@ -28,6 +29,19 @@ class baseController extends Controller
            return view("pages.home");
         }  
     }
+
+    public function addLaporan(Request $request){
+        $nama_pelapor = $request -> input('nama');
+        $alamat = $request -> input('alamat');
+        $id_kabupaten = $request -> input('kabupaten');
+        $isi = $request -> input('laporan');
+
+        $pesan = "Laporan Berhasil dikirim";
+
+        DB::table('laporan')->insert(['nama_pelapor'=> $nama_pelapor, 'alamat'=>$alamat,'id_kabupaten'=>$id_kabupaten,'isi'=>$isi]);
+        return redirect("/");
+    }
+
     public function view_peta(){
         return view("pages.view-peta");
     }

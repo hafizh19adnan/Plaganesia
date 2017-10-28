@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 28, 2017 at 12:51 PM
+-- Generation Time: Oct 28, 2017 at 03:01 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -112,6 +112,17 @@ CREATE TABLE `laporan` (
   `id_kabupaten` int(6) UNSIGNED NOT NULL,
   `isi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `laporan`
+--
+
+INSERT INTO `laporan` (`id`, `nama_pelapor`, `alamat`, `id_kabupaten`, `isi`) VALUES
+(1, 'Batman bin Suparman', 'Jl. Kaca Piring No. 20, Cijantung', 2, 'Malam pak/bu, di sebelah rumah saya ada ayam mati mendadak. Tapi ayam yang lain selamet. saya ga yakin klo ayamnya cuman keselek. Mungkin ada penyakit yang belum ketahuan. Mohon diselidiki trims'),
+(2, 'Batman bin Supi Darman', 'Jl. Kaca Piring No. 12, Cijantung', 2, 'Malam pak/bu, di sebelah rumah saya ada sapimati mendadak. Tapi sapi yang lain selamet. saya ga yakin klo sapinya cuman keselek. Mungkin ada penyakit yang belum ketahuan. Mohon diselidiki trims'),
+(3, 'Ibu Fradya', 'Jl. Bangkok No. 45', 4, 'Di perumahan PLN Kebayoran Baru banyak yang terkena DB. Harap segera di fogging. thx'),
+(4, 'Pak Pradyo', 'Jl. Bangkok No. 45', 4, 'Tolong pak/bu. Di perumahan PLN Kebayoran Baru banyak yang terkena DB. Harap segera di fogging. thx'),
+(5, 'Mas Paryo', 'Jl. Bangkok No. 40', 4, 'Pak Tolong ini di perumahan PLN banyak yang sakit DB');
 
 -- --------------------------------------------------------
 
@@ -273,19 +284,20 @@ CREATE TABLE `survey` (
   `id_kabupaten` int(6) UNSIGNED NOT NULL,
   `token` varchar(50) DEFAULT NULL,
   `tgl_mulai` date DEFAULT NULL,
-  `tgl_selesai` date DEFAULT NULL
+  `tgl_selesai` date DEFAULT NULL,
+  `panduan` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `survey`
 --
 
-INSERT INTO `survey` (`id`, `nama`, `id_penyakit`, `id_kabupaten`, `token`, `tgl_mulai`, `tgl_selesai`) VALUES
-(1, 'Survey Demam Berdarah Jakarta Selatan Oktober 2017', 1, 1, 'jkt-s-10-17', '2017-10-01', '2017-10-25'),
-(2, 'Survey Demam Berdarah Jakarta Timur Oktober 2017', 1, 2, 'jkt-t-10-17', '2017-10-01', '2017-10-25'),
-(3, 'Survey Demam Berdarah Jakarta Barat Oktober 2017', 1, 3, 'jkt-b-10-17', '2017-10-01', '2017-10-25'),
-(4, 'Survey Demam Berdarah Jakarta Utara Oktober 2017', 1, 4, 'jkt-u-10-17', '2017-10-01', '2017-10-25'),
-(5, 'Survey Demam Berdarah Jakarta Pusat Oktober 2017', 1, 5, 'jkt-p-10-17', '2017-10-01', '2017-10-25');
+INSERT INTO `survey` (`id`, `nama`, `id_penyakit`, `id_kabupaten`, `token`, `tgl_mulai`, `tgl_selesai`, `panduan`) VALUES
+(1, 'Survey Demam Berdarah Jakarta Selatan Oktober 2017', 1, 1, 'jkt-s-10-17', '2017-10-01', '2017-10-25', 'Isi dengan hati yang lapang'),
+(2, 'Survey Demam Berdarah Jakarta Timur Oktober 2017', 1, 2, 'jkt-t-10-17', '2017-10-01', '2017-10-25', 'Isi dengan hati yang lapang'),
+(3, 'Survey Demam Berdarah Jakarta Barat Oktober 2017', 1, 3, 'jkt-b-10-17', '2017-10-01', '2017-10-25', 'Isi dengan hati yang lapang'),
+(4, 'Survey Demam Berdarah Jakarta Utara Oktober 2017', 1, 4, 'jkt-u-10-17', '2017-10-01', '2017-10-25', 'Isi dengan hati yang lapang'),
+(5, 'Survey Demam Berdarah Jakarta Pusat Oktober 2017', 1, 5, 'jkt-p-10-17', '2017-10-01', '2017-10-25', 'Isi dengan hati yang lapang');
 
 -- --------------------------------------------------------
 
@@ -433,7 +445,7 @@ ALTER TABLE `kecamatan`
 -- AUTO_INCREMENT for table `laporan`
 --
 ALTER TABLE `laporan`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `penyakit`
 --
