@@ -74,23 +74,43 @@
     </div>
   </div>
 
-  <section id="aspiration">
+  <section id="aspiration" >
     <div class="container">
       <div class="col-md-12">
         <h3 class="center">Laporkan Potensi Wabah</h3>
       </div>
       <div class="col-md-12">
         <form>
-           <div class="row">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">mode_edit</i>
-          <textarea style="height: 5rem" id="icon_prefix2" class="materialize-textarea" rows="9"></textarea>
-          <label for="icon_prefix2">Masukan Laporan</label>
-        </div>
-      </div>
-              <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Laporkan</button>
-              </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" id="nama" name="nama" placeholder="Nama Pelapor">
+              <label for="nama" class="black-text">Nama </label>
+            </div>
+            <div class="input-field col s6">
+              <input type="text" id="alamat" name="alamat" placeholder="Alamat Lengkap Pelapor">
+              <label for="alamat" class="black-text">Alamat </label>
+            </div>
+            <div class="input-field col s6">
+              <select name="kabupaten" id="kabupaten">
+                <option value="1">Jakarta Utara</option>
+                <option value="2">Jakarta Timur</option>
+                <option value="3">Jakarta Barat</option>
+                <option value="4">Jakarta Selatan</option>
+                <option value="5">Jakarta Pusat</option>
+              </select>
+              <label for="kabupaten" class="black-text">Kabupaten </label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">mode_edit</i>
+                <textarea style="height: 5rem" id="icon_prefix2" class="materialize-textarea" rows="9"></textarea>
+                <label for="icon_prefix2" class="black-text">Masukan Laporan</label>
+            </div>
+          </div>
+          <div class='row'>
+            <div class="col s4"></div>
+            <button type='submit' name='btn_login' class='col s4 btn btn-large waves-effect indigo'>Laporkan</button>
+            <div class="col s4"></div>
+          </div>
         </form>
       </div>
     </div>
