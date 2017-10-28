@@ -65,7 +65,8 @@ class baseController extends Controller
     }
    
     public function buatSurvey() {
-        return view("pages.survey");
+        $list_provinsi=DB::table('provinsi')->get();
+        return view("pages.survey",['list_provinsi'=>$list_provinsi]);
     }
 
     public function isiSurvey() {
@@ -103,8 +104,8 @@ class baseController extends Controller
         $status0="danger";
         $status1="danger";
         $status2="warning";
-        $status3="safe";
-       
-        return view("pages.gov-jakarta",['status0'=>$status0,'status1'=>$status1,'status2'=>$status2,'status3'=>$status3]);
+        $status3="danger";
+        $status4="warning";
+        return view("pages.gov-jakarta",['status0'=>$status0,'status1'=>$status1,'status2'=>$status2,'status3'=>$status3,'status4'=>$status4]);
     }
 }
