@@ -99,5 +99,12 @@ class baseController extends Controller
         $request->session()->flush();
         return redirect('home');   
     }
-
+    public function jakarta_gov(Request $request){
+        $status0="danger";
+        $status1="danger";
+        $status2="warning";
+        $status3="safe";
+       
+        return view("pages.gov-jakarta",['status0'=>$status0,'status1'=>$status1,'status2'=>$status2,'status3'=>$status3]);
+    }
 }

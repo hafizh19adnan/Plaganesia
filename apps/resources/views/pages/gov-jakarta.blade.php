@@ -5,10 +5,10 @@
     <div id="map" style="width: 100%; height: 600px"></div>
 </div>
 <?php
-	$xml=simplexml_load_file("states.xml") or die("Error: Cannot create object");
+	$xml=simplexml_load_file("jakarta.xml") or die("Error: Cannot create object");
 	$xml->formatOutput = true;
 	$color_set="";
-	for ($i=0; $i<8 ; $i++) { 
+	for ($i=0; $i<4 ; $i++) { 
 		
 		if(${'status'.$i}=="danger"){
 			$color_set="red";
@@ -20,8 +20,9 @@
 		$xml->state[$i]['colour']=$color_set;
 	}
 	
-	$xml->asXml('states.xml');
+	$xml->asXml('jakarta.xml');
 ?>
+
   <div class="container" style="position:absolute; left:21px; top:115px;">
     <div class="center row">
       <div class="col " style="background-color:white; height:65px; width:345px;">
@@ -159,7 +160,7 @@
       var map = new GMap2(document.getElementById("map"));
       map.addControl(new GLargeMapControl());
       map.addControl(new GMapTypeControl());
-      map.setCenter(new GLatLng(-7.6074635,110.4723612),7);
+      map.setCenter(new GLatLng(-6.21428189,106.85199738),11);
 
    
 
@@ -167,7 +168,7 @@
       
       var request = GXmlHttp.create();
       var xml=new XMLHttpRequest();
-      request.open("GET", "states.xml", true);
+      request.open("GET", "jakarta.xml", true);
       request.onreadystatechange = function() {
         if (request.readyState == 4) {
           var xmlDoc = GXml.parse(request.responseText);
