@@ -65,7 +65,11 @@ class baseController extends Controller
     }
    
     public function buatSurvey() {
-        return view("pages.survey");
+        $provinsis = DB::table('provinsi')->get();
+        $kabupatens = DB::table('kabupaten')->get();
+        $penyakits = DB::table('penyakit')->get();
+        return view('pages.survey', ['provinsis'=>$provinsis, 'kabupatens'=>$kabupatens, 'penyakits'=>$penyakits]);
+
     }
 
     public function isiSurvey() {
@@ -106,5 +110,19 @@ class baseController extends Controller
         $status3="safe";
        
         return view("pages.gov-jakarta",['status0'=>$status0,'status1'=>$status1,'status2'=>$status2,'status3'=>$status3]);
+    }
+
+    public function tambahSurvey(Request $request) {
+        $namaSurvey = $request->input('nama_survey');
+        $idProvinsi = $request->input('provinsi');
+        $idKabupaten = $request->input('kabupaten');
+        $idPenyakit = $request->input('penyakit');
+        $tanggalMulai = $request->input('tanggal-mulai');
+        $tanggalSelesai = $request->input('tanggal-selesai');
+        $panduan = $request->input('panduan');
+        $token = rand();
+
+        DB::table('survey')->insert(['nama' => $namaSurvey, 'id_penyakit' => $idPenyakit, 'id_kabupaten'=>$idKabupaten, 'token'=>$token, 'tgl_mulai'=>$tanggalMulai, 'tgl_selesai'=>$tanggalSelesai]);
+        return redirect('dashboard-gov');
     }
 }
