@@ -108,6 +108,10 @@
             </div>
           </div>
           <div class='row'>
+            <?php 
+              $date = date("Y-m-d");
+              echo "<input type='hidden' name='tgl_lapor' value='".$date."'>";
+            ?>
             <div class="col s4"></div>
             <button type='submit' name='btn_login' class='col s4 btn btn-large waves-effect indigo'>Laporkan</button>
             <div class="col s4"></div>

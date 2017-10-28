@@ -21,51 +21,63 @@
       <h3 class="header center text-lighten-4" >Buat Survey</h3>
       <div class="section">
         <div class="row">
-          <form class="col s12">
+          <form class="col s12" method="post" action="tambahSurvey">
+              {{csrf_field()}}
             <div class="row">
               <div class="input-field col s12">
-                <input placeholder="Survey DBD Tahun 2017" id="nama_survey" type="text" class="validate">
+                <input placeholder="Survey DBD Tahun 2017" id="nama_survey" type="text" class="validate" name="nama_survey">
                 <label for="nama_survey">Nama Survey</label>
               </div>
             </div>
             <div class="row">
                <div class="input-field col s12">
-                <select>
+                <select name="provinsi">
                   <option value="" disabled selected>Pilih Provinsi...</option>
-                  <option value="1">DKI Jakarta</option>
-                  <option value="2">Jawa Tengah</option>
-                  <option value="3">Jawa Timur</option>
+                  @foreach ($provinsis as $provinsi)
+                    <option value="{{$provinsi->id}}">{{$provinsi->nama}}</option>
+                  @endforeach
                 </select>
                 <label for="last_name">Provinsi</label>
               </div>
             </div>
             <div class="row">
                <div class="input-field col s12">
-                <select>
+                <select name="kabupaten">
                   <option value="" disabled selected>Pilih Kabupaten/Kota...</option>
-                  <option value="1">Jakarta Timur</option>
-                  <option value="2">Jakarta Barat</option>
-                  <option value="3">Jakarta Selatan</option>
+                  @foreach ($kabupatens as $kabupaten)
+                   <option value="{{$kabupaten->id}}">{{$kabupaten->nama}}</option>
+                  @endforeach
                 </select>
                 <label for="last_name">Kabupaten</label>
               </div>
             </div>
             <div class="row">
-              <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Panduan Survey</label>
+               <div class="input-field col s12">
+                <select name="penyakit">
+                  <option value="" disabled selected>Pilih Penyakit...</option>
+                  @foreach ($penyakits as $penyakit)
+                   <option value="{{$penyakit->id}}">{{$penyakit->nama}}</option>
+                  @endforeach
+                </select>
+                <label for="">Nama Penyakit</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <textarea id="textarea2" class="materialize-textarea"></textarea>
+                <input type="text" class="datepicker" name="tanggal-mulai">
                 <label for="textarea1">Tanggal Mulai</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <textarea id="textarea3" class="materialize-textarea"></textarea>
+                <input type="text" class="datepicker" name="tanggal-selesai">
                 <label for="textarea1">Tanggal Selesai</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea" name="panduan-survey"></textarea>
+                <label for="textarea1">Panduan Survey</label>
               </div>
             </div>
             <div class="row center">
@@ -80,6 +92,7 @@
     $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
     selectYears: 15, // Creates a dropdown of 15 years to control year,
+    format: 'yyyy-mm-dd'
     today: 'Today',
     clear: 'Clear',
     close: 'Ok',

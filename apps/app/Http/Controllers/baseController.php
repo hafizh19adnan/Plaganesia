@@ -34,10 +34,11 @@ class baseController extends Controller
         $alamat = $request -> input('alamat');
         $id_kabupaten = $request -> input('kabupaten');
         $isi = $request -> input('laporan');
+        $tgl_lapor = $request -> input('tgl_lapor');
 
         $pesan = "Laporan Berhasil dikirim";
 
-        DB::table('laporan')->insert(['nama_pelapor'=> $nama_pelapor, 'alamat'=>$alamat,'id_kabupaten'=>$id_kabupaten,'isi'=>$isi]);
+        DB::table('laporan')->insert(['nama_pelapor'=> $nama_pelapor, 'alamat'=>$alamat,'id_kabupaten'=>$id_kabupaten,'isi'=>$isi ,'tgl_lapor'=>$tgl_lapor]);
         return redirect("/");
     }
 
@@ -80,8 +81,11 @@ class baseController extends Controller
     }
    
     public function buatSurvey() {
-        $list_provinsi=DB::table('provinsi')->get();
-        return view("pages.survey",['list_provinsi'=>$list_provinsi]);
+
+        $provinsis = DB::table('provinsi')->get();
+        $kabupatens = DB::table('kabupaten')->get();
+        $penyakits = DB::table('penyakit')->get();
+        return view('pages.survey', ['provinsis'=>$provinsis, 'kabupatens'=>$kabupatens, 'penyakits'=>$penyakits]);
     }
 
     public function isiSurvey() {
@@ -127,5 +131,19 @@ class baseController extends Controller
         $status3="danger";
         $status4="warning";
         return view("pages.gov-jakarta",['status0'=>$status0,'status1'=>$status1,'status2'=>$status2,'status3'=>$status3,'status4'=>$status4]);
+    }
+
+    public function tambahSurvey(Request $request) {
+        $namaSurvey = $request->input('nama_survey');
+        $idProvinsi = $request->input('provinsi');
+        $idKabupaten = $request->input('kabupaten');
+        $idPenyakit = $request->input('penyakit');
+        $tanggalMulai = $request->input('tanggal-mulai');
+        $tanggalSelesai = $request->input('tanggal-selesai');
+        $panduan = $request->input('panduan');
+        $token = rand();
+
+        DB::table('survey')->insert(['nama' => $namaSurvey, 'id_penyakit' => $idPenyakit, 'id_kabupaten'=>$idKabupaten, 'token'=>$token, 'tgl_mulai'=>$tanggalMulai, 'tgl_selesai'=>$tanggalSelesai]);
+        return redirect('dashboard-gov');
     }
 }
