@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 28, 2017 at 03:01 PM
+-- Generation Time: Oct 28, 2017 at 03:19 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -110,19 +110,20 @@ CREATE TABLE `laporan` (
   `nama_pelapor` varchar(50) NOT NULL,
   `alamat` text NOT NULL,
   `id_kabupaten` int(6) UNSIGNED NOT NULL,
-  `isi` text NOT NULL
+  `isi` text NOT NULL,
+  `tgl_lapor` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `laporan`
 --
 
-INSERT INTO `laporan` (`id`, `nama_pelapor`, `alamat`, `id_kabupaten`, `isi`) VALUES
-(1, 'Batman bin Suparman', 'Jl. Kaca Piring No. 20, Cijantung', 2, 'Malam pak/bu, di sebelah rumah saya ada ayam mati mendadak. Tapi ayam yang lain selamet. saya ga yakin klo ayamnya cuman keselek. Mungkin ada penyakit yang belum ketahuan. Mohon diselidiki trims'),
-(2, 'Batman bin Supi Darman', 'Jl. Kaca Piring No. 12, Cijantung', 2, 'Malam pak/bu, di sebelah rumah saya ada sapimati mendadak. Tapi sapi yang lain selamet. saya ga yakin klo sapinya cuman keselek. Mungkin ada penyakit yang belum ketahuan. Mohon diselidiki trims'),
-(3, 'Ibu Fradya', 'Jl. Bangkok No. 45', 4, 'Di perumahan PLN Kebayoran Baru banyak yang terkena DB. Harap segera di fogging. thx'),
-(4, 'Pak Pradyo', 'Jl. Bangkok No. 45', 4, 'Tolong pak/bu. Di perumahan PLN Kebayoran Baru banyak yang terkena DB. Harap segera di fogging. thx'),
-(5, 'Mas Paryo', 'Jl. Bangkok No. 40', 4, 'Pak Tolong ini di perumahan PLN banyak yang sakit DB');
+INSERT INTO `laporan` (`id`, `nama_pelapor`, `alamat`, `id_kabupaten`, `isi`, `tgl_lapor`) VALUES
+(1, 'Batman bin Suparman', 'Jl. Kaca Piring No. 20, Cijantung', 2, 'Malam pak/bu, di sebelah rumah saya ada ayam mati mendadak. Tapi ayam yang lain selamet. saya ga yakin klo ayamnya cuman keselek. Mungkin ada penyakit yang belum ketahuan. Mohon diselidiki trims', '2017-10-28'),
+(2, 'Batman bin Supi Darman', 'Jl. Kaca Piring No. 12, Cijantung', 2, 'Malam pak/bu, di sebelah rumah saya ada sapimati mendadak. Tapi sapi yang lain selamet. saya ga yakin klo sapinya cuman keselek. Mungkin ada penyakit yang belum ketahuan. Mohon diselidiki trims', '2017-10-28'),
+(3, 'Ibu Fradya', 'Jl. Bangkok No. 45', 4, 'Di perumahan PLN Kebayoran Baru banyak yang terkena DB. Harap segera di fogging. thx', '2017-10-28'),
+(4, 'Pak Pradyo', 'Jl. Bangkok No. 45', 4, 'Tolong pak/bu. Di perumahan PLN Kebayoran Baru banyak yang terkena DB. Harap segera di fogging. thx', '2017-10-28'),
+(5, 'Mas Paryo', 'Jl. Bangkok No. 40', 4, 'Pak Tolong ini di perumahan PLN banyak yang sakit DB', '2017-10-28');
 
 -- --------------------------------------------------------
 

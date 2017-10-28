@@ -35,10 +35,11 @@ class baseController extends Controller
         $alamat = $request -> input('alamat');
         $id_kabupaten = $request -> input('kabupaten');
         $isi = $request -> input('laporan');
+        $tgl_lapor = $request -> input('tgl_lapor');
 
         $pesan = "Laporan Berhasil dikirim";
 
-        DB::table('laporan')->insert(['nama_pelapor'=> $nama_pelapor, 'alamat'=>$alamat,'id_kabupaten'=>$id_kabupaten,'isi'=>$isi]);
+        DB::table('laporan')->insert(['nama_pelapor'=> $nama_pelapor, 'alamat'=>$alamat,'id_kabupaten'=>$id_kabupaten,'isi'=>$isi, ,'tgl_lapor'=>$tgl_lapor]);
         return redirect("/");
     }
 
