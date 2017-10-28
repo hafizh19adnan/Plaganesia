@@ -40,7 +40,16 @@ class baseController extends Controller
     }
 
     public function dashboard_gov(){
-        return view("pages.dashboard-gov");
+        $status0="danger";
+        $status1="danger";
+        $status2="danger";
+        $status3="danger";
+        $status4="danger";
+        $status5="danger";
+        $status6="danger";
+        $status7="danger";
+
+        return view("pages.dashboard-gov",['status0'=>$status0,'status1'=>$status1,'status2'=>$status2,'status3'=>$status3,'status4'=>$status4,'status5'=>$status5,'status6'=>$status6,'status7'=>$status7]);
     }
 
     public function login(){

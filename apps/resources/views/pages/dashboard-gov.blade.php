@@ -1,10 +1,27 @@
 @extends('layouts.gov')
 @section('content')
- <div class="section row" style="margin-top: -2%;">
-        <div id="map" style="width: 100%; height: 600px"></div>
 
-  </div>
-  
+<div class="section row" style="margin-top: -2%;">
+    <div id="map" style="width: 100%; height: 600px"></div>
+</div>
+<?php
+	$xml=simplexml_load_file("states.xml") or die("Error: Cannot create object");
+	$xml->formatOutput = true;
+	$color_set="";
+	for ($i=0; $i<8 ; $i++) { 
+		
+		if(${'status'.$i}=="danger"){
+			$color_set="red";
+		}else if(${'status'.$i}=="warning"){
+			$color_set="yellow";
+		}else{
+			$color_set="green";
+		}
+		$xml->state[$i]['colour']=$color_set;
+	}
+	
+	$xml->asXml('states.xml');
+?>
   <div class="container" style="position:absolute; left:21px; top:115px;">
     <div class="center row">
       <div class="col " style="background-color:white; height:65px; width:345px;">
@@ -25,10 +42,7 @@
         </form>
       </div>
     </div>
-  </div>
-
-        
-     
+  </div>    
     <br><br>
      <div class="container">
        <div id="squares">
@@ -152,6 +166,7 @@
       // Read the data from states.xml
       
       var request = GXmlHttp.create();
+      var xml=new XMLHttpRequest();
       request.open("GET", "states.xml", true);
       request.onreadystatechange = function() {
         if (request.readyState == 4) {
