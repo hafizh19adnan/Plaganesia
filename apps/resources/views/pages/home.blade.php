@@ -73,14 +73,15 @@
       </div>
     </div>
   </div>
-
   <section id="aspiration" >
     <div class="container">
       <div class="col-md-12">
         <h3 class="center">Laporkan Potensi Wabah</h3>
+        <blockquote>@empty($pesan) @endempty</blockquote>
       </div>
       <div class="col-md-12">
-        <form>
+        <form action="addLaporan">
+          {{csrf_field()}}
           <div class="row">
             <div class="input-field col s12">
               <input type="text" id="nama" name="nama" placeholder="Nama Pelapor">
@@ -102,7 +103,7 @@
             </div>
             <div class="input-field col s12">
               <i class="material-icons prefix">mode_edit</i>
-                <textarea style="height: 5rem" id="icon_prefix2" class="materialize-textarea" rows="9"></textarea>
+                <textarea style="height: 5rem" id="icon_prefix2" class="materialize-textarea" rows="9" name="laporan"></textarea>
                 <label for="icon_prefix2" class="black-text">Masukan Laporan</label>
             </div>
           </div>
@@ -114,7 +115,7 @@
         </form>
       </div>
     </div>
-  </section>    
-  
+  </section>    -
+
 
 @stop
