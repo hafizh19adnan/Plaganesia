@@ -38,20 +38,16 @@
                 </tr>
               </thead>
               <tbody>
+                @foreach($list_survey as $survey)
                 <tr>
-                  <td>Survey DBD 2017</td>
-                  <td>Jakarta Selatan</td>
-                  <td>2017-08-24</td>
-                  <td>2017-08-30</td>
-                  <td>DBD</td>
+                  <td>{{$survey->nama}}</td>
+                  <td>{{$survey->id_kabupaten}}</td>
+                  <td>{{$survey->tgl_mulai}}</td>
+                  <td>{{$survey->tgl_selesai}}</td>
+                  <td>{{$survey->id_penyakit}}</td>
                 </tr>
-                <tr>
-                  <td>Survey DBD 2017</td>
-                  <td>Jakarta Selatan</td>
-                  <td>2017-08-24</td>
-                  <td>2017-08-30</td>
-                  <td>DBD</td>
-                </tr>
+                @endforeach
+                
               </tbody>
             </table>
           </div>

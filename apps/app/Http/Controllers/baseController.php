@@ -21,10 +21,9 @@ class baseController extends Controller
         if($request->session()->has('users')){
              if($request->session()->has('gov')){
                 return redirect('dashboard-pemerintah');
-             }else{
-                return redirect('dashboard-surveyor');
+             }else if($request->session()->has('survey')){
+                return redirect('list-survey');
              }
-            
         }else{
            return view("pages.home");
         }  
@@ -71,11 +70,13 @@ class baseController extends Controller
     }
 
     public function daftarLaporan() {
-        return view("pages.daftar-laporan");
+        $list_laporan = DB::table('laporan')->get();
+        return view("pages.daftar-laporan",['list_laporan'=>$list_laporan]);
     }
 
     public function daftarSurvey() {
-        return view("pages.daftar-survey");
+        $list_survey = DB::table('survey')->get();
+        return view("pages.daftar-survey",['list_survey'=>$list_survey]);
     }
    
     public function buatSurvey() {
@@ -94,21 +95,26 @@ class baseController extends Controller
     public function loginAction(Request $request){
         $username = $request->input('username');
         $password = $request->input('password');
-        $account=DB::table('account')->where('username',$username)->count();
+        $account_gov=DB::table('account')->where('username',$username)->where('role',1)->count();
+        $account_survey=DB::table('account')->where('username',$username)->where('role',2)->count();
         $passwordDB=DB::table('account')->where('username',$username)->value('password');
-        $role=DB::table('account')->where('username',$username)->value('role');
-
-
-        if($account==1 && $passwordDB==$password && $role="1"){
-            $request->session()->put('users', '$username');
-            $request->session()->put('gov', '$username');
-            return redirect('dashboard-gov');
-        }else if($account==1 && $passwordDB==$password && $role="2"){
-            $request->session()->put('users', '$username');
-            return redirect('dashboard-surveyor');
+        if($account_gov==1 && $passwordDB==$password){
+            $request->session()->put('username',$username);
+            $request->session()->put('gov',$username);
+            return redirect("/dashboard-gov");
         }else{
-            return redirect('login');
+            if($account_survey==1 && $passwordDB==$password){
+                $request->session()->put('username',$username);
+                $request->session()->put('survey',$username);
+                return redirect("/dashboard-surveyor");
+            }else{
+                return redirect("/login");
+            }
+           
         }
+
+
+        
     }
     public function logout(Request $request){
         $request->session()->flush();
