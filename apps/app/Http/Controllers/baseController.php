@@ -169,4 +169,15 @@ class baseController extends Controller
         DB::table('survey')->insert(['nama' => $namaSurvey, 'id_penyakit' => $idPenyakit, 'id_kabupaten'=>$idKabupaten, 'token'=>$token, 'tgl_mulai'=>$tanggalMulai, 'tgl_selesai'=>$tanggalSelesai]);
         return redirect('dashboard-gov');
     }
+
+    public function panduanSurvey(){
+        $id = Input::get('id');
+        $nama = DB::table("survey")->select("nama")->where('id', $id)->get();
+        $tgl_mulai = DB::table("survey")->select("tgl_mulai")->where('id', $id)->get();
+        $tgl_selesai = DB::table("survey")->select("tgl_selesai")->where('id', $id)->get();
+        $panduan = DB::table("survey")->select("panduan")->where('id', $id)->get();
+        $idKabupaten = DB::table("survey")->select("id_kabupaten")->where('id', $id)->get();
+        $kabupaten = "Kabupaten";//DB::table("kabupaten")->select("nama")->where('id', $idKabupaten)->get();
+        return view("pages.panduan-survey", ['nama' => $nama, 'tgl_mulai' => $tgl_mulai, 'tgl_selesai'=> $tgl_selesai, 'kabupaten'=>$kabupaten, 'panduan'=>$panduan]);
+    }
 }
