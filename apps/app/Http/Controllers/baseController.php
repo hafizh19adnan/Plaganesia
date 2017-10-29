@@ -110,9 +110,15 @@ class baseController extends Controller
     }
 
     public function daftarSurvey() {
-        $list_survey = DB::table('survey')->get();
-        // $idKabupaten = DB::table('survey')->value('id_kabupaten');
-        // $kabupaten = DB::table('kabupaten')->where('id_provinsi',$idKabupaten);
+        //$list_survey = DB::table('survey')->get();
+        //return view("pages.daftar-survey",['list_survey'=>$list_survey]);
+
+        $list_survey = DB::table('survey')
+            ->join('kabupaten', 'kabupaten.id', '=', 'survey.id_kabupaten')
+            ->join('penyakit', 'penyakit.id', '=', 'survey.id_penyakit')
+            ->select('survey.*', 'kabupaten.nama as kabupaten', 'penyakit.nama as penyakit')
+            ->get();
+
         return view("pages.daftar-survey",['list_survey'=>$list_survey]);
     }
    
