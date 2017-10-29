@@ -53,7 +53,18 @@ class baseController extends Controller
         return view("pages.public-info");
     }
 
+    public function isiSampel(Request $request) {
+        $nama = $request -> input('nama');
+        $umur = $request -> input('usia');
+        $gender = $request -> input('gender');
+        $is_sakit = $request -> input('is_sakit');
+        $tgl_sakit = $request -> input('tgl_sakit');
+        $is_meninggal = $request -> input('is_meninggal');
+        $id_survey = $request -> input('id_survey');
 
+        DB::table('sample')->insert(['nama'=>$nama, 'umur'=>$umur, 'gender'=>$gender, 'is_sakit'=>$is_sakit, 'tgl_sakit'=>$tgl_sakit, 'is_meninggal'=>$is_meninggal, 'id_survey'=>$id_survey, 'id_surveyor'=>1]);
+        return redirect("/dashboard-surveyor");
+    }
 
     public function dashboard_gov(){
 
@@ -100,24 +111,31 @@ class baseController extends Controller
 
     public function daftarSurvey() {
         $list_survey = DB::table('survey')->get();
+        // $idKabupaten = DB::table('survey')->value('id_kabupaten');
+        // $kabupaten = DB::table('kabupaten')->where('id_provinsi',$idKabupaten);
         return view("pages.daftar-survey",['list_survey'=>$list_survey]);
     }
    
     public function buatSurvey() {
-
         $provinsis = DB::table('provinsi')->get();
         $kabupatens = DB::table('kabupaten')->get();
         $penyakits = DB::table('penyakit')->get();
         return view('pages.survey', ['provinsis'=>$provinsis, 'kabupatens'=>$kabupatens, 'penyakits'=>$penyakits]);
-
     }
 
+
     public function isiSurvey() {
-        return view("pages.isi-survey");
+        $idSurvey = Input::get('id_survey');
+        $survey = DB::table('survey')->where('id',$idSurvey);
+        $nama_survey = $survey->value('nama');
+        $tgl_mulai = $survey->value('tgl_mulai');
+        $tgl_selesai = $survey->value('tgl_selesai');
+        return view("pages.isi-survey", ['nama_survey'=>$nama_survey, 'tgl_mulai'=>$tgl_mulai, 'tgl_selesai'=>$tgl_selesai, 'id_survey'=>$idSurvey]);
     }
 
     public function listSurveyOfSurveyor() {
-        return view("pages.list-survey");
+        $surveys_surveyor = DB::table('survey')->get();
+        return view("pages.list-survey", ['surveys_surveyor'=>$surveys_surveyor]);
     }
 
     public function loginAction(Request $request){

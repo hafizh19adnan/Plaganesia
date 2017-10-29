@@ -2,22 +2,19 @@
 @section('content')
    <div class="container">
       <br>
-      <h5 class="header center text-lighten-4">FORMULIR SURVEY PENYEBARAN DBD AGUSTUS 2017</h5><br>
+      <h5 class="header center text-lighten-4">FORMULIR SURVEY {{$nama_survey}}</h5><br>
       <div class="section">
         <div class="row">
           <div class="col s5">Rentang Pengisian</div>
-          <div class="col s7"><strong>2017-08-10</strong> sampai <strong>2017-08-15</strong></div>
-          <div class="col s5">Lokasi Pengisian</div>
-          <div class="col s7"><strong>RSAD Cijantung, Jakarta Timur</strong></div><br><br><br>
+          <div class="col s7"><strong>{{$tgl_mulai}}</strong> sampai <strong>{{$tgl_selesai}}</strong></div><br><br>
         <button class="btn waves-effect waves-light col s12 light-blue darken-4" type="submit" name="action" style="margin-top: 2%;">PANDUAN PENGISIAN FORMULIR</button>
         </div>
       </div>
       <div class="section">
         <div class="row">
-          <form class="col s12">
+          <form class="col s12"  action="isi-sampel" method="post">
           {{ csrf_field() }}
-          <input name="nama" id="nama" type="hidden" value="" class="validate">
-          <input name="tgl_data" id="tgl_data" type="hidden" value="" class="validate">
+            <input type="hidden" value="{{$id_survey}}" name="id_survey">
             <div class="row">
               <div class="input-field col s12">
                 <input placeholder="Nama Responden" name="nama"  id="nama" type="text" class="validate">
@@ -44,8 +41,8 @@
               <div class="input-field col s12">
                  <select name="is_sakit" id="is_sakit">
                   <option value="" disabled selected>Pilih Status...</option>
-                  <option value="true">Penderita</option>
-                  <option value="false">Suspect</option>
+                  <option value="1">Penderita</option>
+                  <option value="0">Suspect</option>
                 </select>
                 <label for="is_sakit">Status Penyakit</label>
               </div>
@@ -60,8 +57,8 @@
               <div class="input-field col s12">
                  <select name="is_meninggal" id="is_meninggal">
                   <option value="" disabled selected>Pilih Status...</option>
-                  <option value="true">Meninggal</option>
-                  <option value="false">Hidup</option>
+                  <option value="1">Meninggal</option>
+                  <option value="0">Hidup</option>
                 </select>
                 <label for="is_sakit">Status Kematian</label>
               </div>
