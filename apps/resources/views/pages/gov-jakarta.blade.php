@@ -43,29 +43,31 @@
         </form>
       </div>
     </div>
-  </div>    
+  </div>  
+   <h4 class="center">Status Wabah DKI Jakarta : <strong style="color:<?php echo "$nat_color" ?>">{{$nat_status}}</strong></h4>
+   
     <br><br>
      <div class="container">
        <div id="squares">
           <div id="pengidap" class="red lighten-1">             
               <p>Jumlah Kasus</p>
-              <h2>12345</h2>
+              <h3>{{$dki_kasus}}</h3>
           </div>
           <div id="mean_pengidap" class="orange lighten-1">
               <p>Jumlah Suspect</p>
-              <h2>20</h2>
+              <h3>{{$dki_suspect}}</h3>
           </div>
           <div id="modus_pengidap" class="green accent-2">
               <p>Rata-Rata Usia Pengidap</p>
-              <h2>20</h2>
+              <h3>20</h3>
           </div>
           <div id="margin_of_error" class="cyan">
              <p>Case Fatality Rate</p>
-              <h2>0.5%</h2>
+              <h3><?php echo number_format((float)$cfr, 1, '.', '') ?>%</h3>
           </div>
           <div id="5" class="deep-purple lighten-2">
              <p>Case Proportional Rate</p>
-              <h2>50%</h2>
+              <h3><?php echo number_format((float)$cpr, 1, '.', '') ?>%</h3>
           </div>
         </div>
     
@@ -74,25 +76,7 @@
         <div class="col s12">
           <div class="center">
             <br>
-            <h5 class="header">Detail Survey</h5><hr>
-            <div class="col s6 left-align">
-             Nama
-            </div>
-            <div class="col s6 left-align">
-              Survey Nasional Penyebaran DBD Agustus 2017
-             </div>
-            <div class="col s6 left-align">
-             Waktu
-            </div>
-            <div class="col s6 left-align">
-              10 Januari 2017 hingga 10 Januari 2018
-            </div>
-            <div class="col s6 left-align">
-             Jumlah Responden
-            </div>
-            <div class="col s6 left-align">
-            1234
-            </div>
+            
           </div><br><br><br><br>
           <div class="center">
             <h5 class="header">Data Pengidap DBD Semua Provinsi</h5><hr>

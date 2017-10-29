@@ -37,9 +37,19 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/dataTables.material.min.js"></script>
   <script src="js/init.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
+        $('#example').DataTable( {
+          columnDefs: [
+              {
+                  targets: [ 0, 1, 2 ],
+                  className: 'mdl-data-table__cell--non-numeric'
+              }
+          ]
+        });
         $('select').material_select();
 
         $('.datepicker').pickadate({

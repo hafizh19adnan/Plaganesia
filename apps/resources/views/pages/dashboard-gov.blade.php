@@ -43,29 +43,29 @@
       </div>
     </div>
   </div> 
-  <h4 class="center">Status Nasional : <strong>AMAN</strong></h4>
+  <h4 class="center">Status Nasional : <strong style="color:<?php echo "$nat_color" ?>">{{$nat_status}}</strong></h4>
     <br><br>
      <div class="container">
        <div id="squares">
           <div id="pengidap" class="red lighten-1">             
               <p>Jumlah Kasus</p>
-              <h2>{{$case}}</h2>
+              <h3>{{$case}}</h3>
           </div>
           <div id="mean_pengidap" class="orange lighten-1">
               <p>Jumlah Suspect</p>
-              <h2>{{$suspect}}</h2>
+              <h3>{{$suspect}}</h3>
           </div>
           <div id="modus_pengidap" class="green accent-2">
               <p>Rata-Rata Usia Pengidap</p>
-              <h2>{{$mean_umur}}</h2>
+              <h3>{{$mean_umur}}</h3>
           </div>
           <div id="margin_of_error" class="cyan">
              <p>Case Fatality Rate</p>
-              <h2><?php echo number_format((float)$cfr, 1, '.', '') ?>%</h2>
+              <h3><?php echo number_format((float)$cfr, 1, '.', '') ?>%</h3>
           </div>
           <div id="5" class="deep-purple lighten-2">
              <p>Case Proportional Rate</p>
-              <h2><?php echo number_format((float)$cpr, 1, '.', '') ?>%</h2>
+              <h3><?php echo number_format((float)$cpr, 1, '.', '') ?>%</h3>
           </div>
         </div>
     
@@ -75,7 +75,7 @@
           <br><br><br><br>
           <div class="center">
             <h5 class="header">Data Pengidap DBD Semua Provinsi</h5><hr>
-            <table class="striped centered">
+            <table id="example" class="mdl-data-table striped centered" >
               <thead>
                 <tr>
                     <th>Provinsi</th>
@@ -103,7 +103,7 @@
   </div>
   <div class="row">
     <div class="container">
-      <h5 class="header center" >Rekomendasi Tindakn</h5><hr/>
+      <h5 class="header center" >Rekomendasi Tindakan</h5><hr/>
       <div class="rekomendasi">
         <br>
         <div class="row">

@@ -423,7 +423,7 @@
 <point lat="-6.22298" lng="106.75128"/>
 <point lat="-6.22366" lng="106.74783"/>
 </state>
-<state name="Jaktim" colour="green"><point lat="-6.35308" lng="106.87066"/>
+<state name="Jaktim" colour="red"><point lat="-6.35308" lng="106.87066"/>
 <point lat="-6.35709" lng="106.86247"/>
 <point lat="-6.35407" lng="106.86051"/>
 <point lat="-6.35272" lng="106.85593"/>
@@ -740,7 +740,7 @@
 <point lat="-6.35754" lng="106.87181"/>
 <point lat="-6.35668" lng="106.87394"/>
 </state>
-<state name="Jakut" colour="green"><point lat="-6.08721" lng="106.7257"/>
+<state name="Jakut" colour="red"><point lat="-6.08721" lng="106.7257"/>
 <point lat="-6.09182" lng="106.72132"/>
 <point lat="-6.09139" lng="106.72119"/>
 <point lat="-6.09459" lng="106.71117"/>
@@ -983,7 +983,7 @@
 <point lat="-6.10236" lng="106.7445"/>
 <point lat="-6.09959" lng="106.73892"/>
 </state>
-<state name="Jakbar" colour="green"><point lat="-6.13897" lng="106.69074"/>
+<state name="Jakbar" colour="red"><point lat="-6.13897" lng="106.69074"/>
 <point lat="-6.14329" lng="106.68569"/>
 <point lat="-6.1732" lng="106.68991"/>
 <point lat="-6.17869" lng="106.70326"/>

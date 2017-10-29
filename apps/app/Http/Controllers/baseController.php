@@ -57,14 +57,14 @@ class baseController extends Controller
 
     public function dashboard_gov(){
 
-        $status0="safe";
-        $status1="safe";
-        $status2="safe";
-        $status3="safe";
-        $status4="safe";
-        $status5="safe";
-        $status6="safe";
-        $status7="safe";
+        $status0="danger";
+        $status1="danger";
+        $status2="danger";
+        $status3="danger";
+        $status4="danger";
+        $status5="danger";
+        $status6="danger";
+        $status7="danger";
 
         // MEAN UMUR
         $count_umur = DB::table('sample')->where('is_sakit',1)->count('umur');
@@ -86,7 +86,19 @@ class baseController extends Controller
         $fatal_comparator = DB::table('sample')->whereRaw("is_meninggal=1 and tgl_data < '2017/09/10' AND tgl_data >= '2017/08/10'")->count('umur');
         if($fatal_comparator==0)$fatal_comparator=1;
         $cfr = ($fatal_present-$fatal_comparator)/$fatal_comparator*100;
-        return view("pages.dashboard-gov",['status0'=>$status0,'status1'=>$status1,'status2'=>$status2,'status3'=>$status3,'status4'=>$status4,'status5'=>$status5,'status6'=>$status6,'status7'=>$status7,'mean_umur'=>intval($mean_umur),'suspect'=>$suspect,'cpr'=>$cpr,'case'=>$case_total,'cfr'=>$fatal_comparator]);
+
+        if($cfr>=50 || $cpr>=100){
+            $nat_status="Bahaya";
+            $nat_color = "red";
+        }else if($cfr>=50 || $cpr>=80){
+            $nat_status="Warning";
+            $nat_color = "yellow";
+        }else{
+            $nat_status="Aman";
+            $nat_color = "green";
+        }
+
+        return view("pages.dashboard-gov",['status0'=>$status0,'status1'=>$status1,'status2'=>$status2,'status3'=>$status3,'status4'=>$status4,'status5'=>$status5,'status6'=>$status6,'status7'=>$status7,'mean_umur'=>intval($mean_umur),'suspect'=>$suspect,'cpr'=>$cpr,'case'=>$case_total,'cfr'=>$cfr,'nat_status'=>$nat_status,'nat_color'=>$nat_color]);
     }
 
     public function login(){
@@ -147,13 +159,66 @@ class baseController extends Controller
         $request->session()->flush();
         return redirect('home');   
     }
+ 
+
     public function jakarta_gov(Request $request){
-        $status0="danger";
-        $status1="danger";
-        $status2="safe";
-        $status3="safe";
-        $status4="safe";
-        return view("pages.gov-jakarta",['status0'=>$status0,'status1'=>$status1,'status2'=>$status2,'status3'=>$status3,'status4'=>$status4]);
+        $status0=$this->setStatusWabahKabupaten(5);
+        $status1=$this->setStatusWabahKabupaten(1);
+        $status2=$this->setStatusWabahKabupaten(2);
+        $status3=$this->setStatusWabahKabupaten(4);
+        $status4=$this->setStatusWabahKabupaten(3);
+
+        //KASUS DKI
+
+        $dki_kasus = count(DB::select( DB::raw("SELECT * FROM sample S, survey SV, kabupaten K, provinsi P WHERE is_sakit=1 and S.id_survey=SV.id and SV.id_kabupaten=K.id and k.id_provinsi=p.id and p.nama='DKI Jakarta'")));
+        $dki_suspect = count(DB::select( DB::raw("SELECT * FROM sample S, survey SV, kabupaten K, provinsi P WHERE is_sakit=0 and S.id_survey=SV.id and SV.id_kabupaten=K.id and k.id_provinsi=p.id and p.nama='DKI Jakarta'")));
+        
+        //CPR DKI
+        $dki_case_present =  count(DB::select( DB::raw("SELECT * FROM sample S, survey SV, kabupaten K, provinsi P WHERE is_sakit=1 and tgl_data <= '2017/10/10' AND tgl_data >= '2017/09/10' and S.id_survey=SV.id and SV.id_kabupaten=K.id and k.id_provinsi=p.id and p.nama='DKI Jakarta'")));
+        $dki_case_past= count(DB::select( DB::raw("SELECT * FROM sample S, survey SV, kabupaten K, provinsi P WHERE is_sakit=1 and tgl_data < '2017/09/10' AND tgl_data >= '2017/08/10' and S.id_survey=SV.id and SV.id_kabupaten=K.id and k.id_provinsi=p.id and p.nama='DKI Jakarta'")));
+        if($dki_case_past==0)$dki_case_past=1;
+        $cpr=($dki_case_present-$dki_case_past)/$dki_case_past*100;
+        
+        //CFR
+        $dki_fatal_present =  count(DB::select( DB::raw("SELECT * FROM sample S, survey SV, kabupaten K, provinsi P WHERE is_meninggal=1 and tgl_data <= '2017/10/10' AND tgl_data >= '2017/09/10' and S.id_survey=SV.id and SV.id_kabupaten=K.id and k.id_provinsi=p.id and p.nama='DKI Jakarta'")));
+        $dki_fatal_past= count(DB::select( DB::raw("SELECT * FROM sample S, survey SV, kabupaten K, provinsi P WHERE is_meninggal=1 and tgl_data < '2017/09/10' AND tgl_data >= '2017/08/10' and S.id_survey=SV.id and SV.id_kabupaten=K.id and k.id_provinsi=p.id and p.nama='DKI Jakarta'")));
+        if($dki_fatal_past==0)$dki_fatal_past=1;
+        $cfr=($dki_fatal_present-$dki_fatal_past)/$dki_fatal_past*100;
+        if($cfr>=50 || $cpr>=100){
+            $nat_status="Bahaya";
+            $nat_color = "red";
+        }else if($cfr>=50 || $cpr>=80){
+            $nat_status="Warning";
+            $nat_color = "yellow";
+        }else{
+            $nat_status="Aman";
+            $nat_color = "green";
+        }
+        
+        return view("pages.gov-jakarta",['status0'=>$status0,'status1'=>$status1,'status2'=>$status2,'status3'=>$status3,'status4'=>$status4,'dki_kasus'=>$dki_kasus,'dki_suspect'=>$dki_suspect,'cpr'=>$cpr,'cfr'=>$cfr,'nat_status'=>$nat_status,'nat_color'=>$nat_color]);
+    }
+
+    public function setStatusWabahKabupaten($id_kabupaten){
+      
+        //CPR DKI
+        $dki_case_present =  count(DB::select( DB::raw("SELECT * FROM sample S, survey SV, kabupaten K, provinsi P WHERE is_sakit=1 and tgl_data <= '2017/10/10' AND tgl_data >= '2017/09/10' and S.id_survey=SV.id and SV.id_kabupaten=K.id and k.id=$id_kabupaten")));
+        $dki_case_past= count(DB::select( DB::raw("SELECT * FROM sample S, survey SV, kabupaten K, provinsi P WHERE is_sakit=1 and tgl_data < '2017/09/10' AND tgl_data >= '2017/08/10' and S.id_survey=SV.id and SV.id_kabupaten=K.id and k.id=$id_kabupaten")));
+        if($dki_case_past==0)$dki_case_past=1;
+        $cpr=($dki_case_present-$dki_case_past)/$dki_case_past*100;
+        
+        //CFR
+        $dki_fatal_present =  count(DB::select( DB::raw("SELECT * FROM sample S, survey SV, kabupaten K, provinsi P WHERE is_meninggal=1 and tgl_data <= '2017/10/10' AND tgl_data >= '2017/09/10' and S.id_survey=SV.id and SV.id_kabupaten=K.id and  k.id=$id_kabupaten")));
+        $dki_fatal_past= count(DB::select( DB::raw("SELECT * FROM sample S, survey SV, kabupaten K, provinsi P WHERE is_meninggal=1 and tgl_data < '2017/09/10' AND tgl_data >= '2017/08/10' and S.id_survey=SV.id and SV.id_kabupaten=K.id and k.id=$id_kabupaten")));
+
+        if($dki_fatal_past==0)$dki_fatal_past=1;
+        $cfr=($dki_fatal_present-$dki_fatal_past)/$dki_fatal_past*100;
+        if($cfr>=50 || $cpr>=100){
+            return "danger";
+        }else if($cfr>=50 || $cpr>=80){
+            return "warning";
+        }else{
+            return "safe";
+        }
     }
 
     public function tambahSurvey(Request $request) {
@@ -166,7 +231,7 @@ class baseController extends Controller
         $panduan = $request->input('panduan');
         $token = rand();
 
-        DB::table('survey')->insert(['nama' => $namaSurvey, 'id_penyakit' => $idPenyakit, 'id_kabupaten'=>$idKabupaten, 'token'=>$token, 'tgl_mulai'=>$tanggalMulai, 'tgl_selesai'=>$tanggalSelesai]);
+        DB::table('survey')->insert(['nama' => $namaSurvey, 'id_penyakit' => $idPenyakit, 'id_kabupaten'=>$idKabupaten, 'token'=>$token, 'tgl_mulai'=>$tanggalMulai, 'tgl_selesai'=>$tanggalSelesai, 'panduan'=>$panduan]);
         return redirect('dashboard-gov');
     }
 }

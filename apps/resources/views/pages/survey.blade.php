@@ -76,7 +76,7 @@
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea" name="panduan-survey"></textarea>
+                <textarea id="textarea1" class="materialize-textarea" name="panduan"></textarea>
                 <label for="textarea1">Panduan Survey</label>
               </div>
             </div>
