@@ -30,6 +30,8 @@ Route::post('/login-action','baseController@loginAction');
 Route::get('/logout','baseController@logout');
 Route::get('/dashboard-gov-jakarta','baseController@jakarta_gov');
 Route::post('/tambahSurvey', 'baseController@tambahSurvey');
+Route::get('/panduan-survey', 'baseController@panduanSurvey');
+Route::post('/isi-sampel', 'baseController@isiSampel');
 
 
 

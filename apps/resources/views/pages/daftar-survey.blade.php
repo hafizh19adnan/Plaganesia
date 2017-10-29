@@ -41,10 +41,10 @@
                 @foreach($list_survey as $survey)
                 <tr>
                   <td>{{$survey->nama}}</td>
-                  <td>{{$survey->id_kabupaten}}</td>
+                  <td>{{$survey->kabupaten}}</td>
                   <td>{{$survey->tgl_mulai}}</td>
                   <td>{{$survey->tgl_selesai}}</td>
-                  <td>{{$survey->id_penyakit}}</td>
+                  <td>{{$survey->penyakit}}</td>
                 </tr>
                 @endforeach
                 
