@@ -11,7 +11,7 @@
                   <input placeholder="SDKI123" id="nama_survey" type="text" class="validate" style="overflow: hidden; padding-right: .5em;">
                   <label for="nama_survey">Token Survey</label>
                 </div>
-                  <button class="btn waves-effect waves-light col s3" type="submit" name="action" style="float: right; margin-top: 5%;">Tambah Survey
+                  <button class="btn waves-effect waves-light col s3" type="submit" name="action" style="float: right;">Tambah Survey
                 </button>
               </div>
             </form>
@@ -27,22 +27,16 @@
                 </tr>
               </thead>
               <tbody>
+              @foreach ($surveys_surveyor as $survey)
                 <tr>
-                  <td>Survey DBD 2017</td>
+                  <td>{{$survey->nama}}</td>
                   <td>Jakarta Selatan</td>
                   <td>2017-08-24</td>
                   <td>2017-08-30</td>
                   <td>DBD</td>
-                  <td><a href = "isi-survey">Isi Survey</a></td>
+                  <td><a href = "isi-survey?id_survey={{$survey->id}}">Isi Survey</a></td>
                 </tr>
-                <tr>
-                  <td>Survey DBD 2017</td>
-                  <td>Jakarta Selatan</td>
-                  <td>2017-08-24</td>
-                  <td>2017-08-30</td>
-                  <td>DBD</td>
-                  <td><a href = "isi-survey">Isi Survey</a></td>
-                </tr>
+              @endforeach
               </tbody>
             </table>
             <div class="row center">

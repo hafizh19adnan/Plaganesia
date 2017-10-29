@@ -103,7 +103,7 @@
   </div>
   <div class="row">
     <div class="container">
-      <h5 class="header center" >Rekomendasi Tindakn</h5><hr/>
+      <h5 class="header center" >Rekomendasi Tindakan</h5><hr/>
       <div class="rekomendasi">
         <br>
         <div class="row">

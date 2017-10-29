@@ -6,9 +6,8 @@
       <div class="section">
         <div class="row">
           <div class="col s5">Rentang Pengisian</div>
-          <div class="col s7"><strong>{{$tgl_mulai}}</strong> sampai <strong>{{tgl_selesai}}</strong>
-          <div class="col s7"><strong>{{$kabupaten}}</strong></div><br><br><br>
-        <a class="btn waves-effect waves-light col s12 light-blue darken-4" href="isi-survey?id={{$id}}" style="margin-top: 2%;">ISI FORMULIR</a>
+          <div class="col s7"><strong>{{$tgl_mulai}}</strong> sampai <strong>{{$tgl_selesai}}</strong></div><br><br>
+        <a class="btn waves-effect waves-light col s12 light-blue darken-4" href="isi-survey?id_survey={{$id}}" style="margin-top: 2%;">ISI FORMULIR</a>
         </div>
       </div>
 
