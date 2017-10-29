@@ -85,7 +85,7 @@ class baseController extends Controller
         $penyakits = DB::table('penyakit')->get();
         return view('pages.survey', ['provinsis'=>$provinsis, 'kabupatens'=>$kabupatens, 'penyakits'=>$penyakits]);
 
-    }
+    } 
 
     public function isiSurvey() {
         return view("pages.isi-survey");

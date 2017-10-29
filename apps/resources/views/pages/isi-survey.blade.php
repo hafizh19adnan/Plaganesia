@@ -50,9 +50,11 @@
                 <label for="is_sakit">Status Penyakit</label>
               </div>
             </div>
+            <div class="row">
             <div class="input-field col s12">
                 <input name="tgl_sakit" id="tgl_sakit" type="text" class="datepicker">
                 <label for="tgl_sakit">Tanggal Sakit</label>
+            </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
