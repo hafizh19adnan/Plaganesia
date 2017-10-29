@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <states>
-<state name="Madura" colour="red"><point lat="-6.87547" lng="113.969"/>
+<state name="Madura" colour="green"><point lat="-6.87547" lng="113.969"/>
 <point lat="-6.86336" lng="113.91006"/>
 <point lat="-6.88628" lng="113.79682"/>
 <point lat="-6.8884" lng="113.72512"/>
@@ -66,7 +66,7 @@
 <point lat="-6.9528" lng="114.11473"/>
 <point lat="-6.93528" lng="114.10083"/>
 </state>
-<state name="Jateng" colour="red"><point lat="-6.72564" lng="111.65843"/>
+<state name="Jateng" colour="green"><point lat="-6.72564" lng="111.65843"/>
 <point lat="-6.74211" lng="111.68089"/>
 <point lat="-6.75857" lng="111.69237"/>
 <point lat="-6.77037" lng="111.68305"/>
@@ -387,7 +387,7 @@
 <point lat="-6.63046" lng="111.53011"/>
 <point lat="-6.64241" lng="111.56374"/>
 </state>
-<state name="Bali" colour="red"><point lat="-8.36912" lng="115.70793"/>
+<state name="Bali" colour="green"><point lat="-8.36912" lng="115.70793"/>
 <point lat="-8.34078" lng="115.67296"/>
 <point lat="-8.32467" lng="115.63249"/>
 <point lat="-8.27614" lng="115.59825"/>
@@ -477,7 +477,7 @@
 <point lat="-8.44425" lng="115.67828"/>
 <point lat="-8.39973" lng="115.71196"/>
 </state>
-<state name="Jakarta" colour="red">
+<state name="Jakarta" colour="green">
 <point lat="-6.10018" lng="106.91663"/>
 <point lat="-6.0937" lng="106.96727"/>
 <point lat="-6.14456" lng="106.97397"/>
@@ -579,7 +579,7 @@
 <point lat="-6.12128" lng="106.84261"/>
 <point lat="-6.09367" lng="106.87687"/>
 </state>
-<state name="Banten" colour="red"><point lat="-6.76135" lng="105.21049"/>
+<state name="Banten" colour="green"><point lat="-6.76135" lng="105.21049"/>
 <point lat="-6.76444" lng="105.22222"/>
 <point lat="-6.78031" lng="105.2274"/>
 <point lat="-6.79369" lng="105.23411"/>
@@ -954,7 +954,7 @@
 <point lat="-6.67194" lng="105.37596"/>
 <point lat="-6.65303" lng="105.37234"/>
 </state>
-<state name="Jabar" colour="red">
+<state name="Jabar" colour="green">
 <point lat="-6.7328" lng="108.84181"/>
 <point lat="-6.75331" lng="108.81174"/>
 <point lat="-6.77993" lng="108.79945"/>
@@ -1244,7 +1244,7 @@
 <point lat="-6.81117" lng="108.82474"/>
 <point lat="-6.7605" lng="108.82585"/>
 </state>
-<state name="Yogyakarta" colour="red">
+<state name="Yogyakarta" colour="green">
 <point lat="  -7.64583" lng="110.1408"/>
 <point lat="-7.6466" lng="110.1562"/>
 <point lat="-7.64936" lng="110.1739"/>
@@ -1548,7 +1548,7 @@
 <point lat="-7.65918" lng="110.1284"/>
 <point lat="-7.65234" lng="110.1363"/>
 </state>
-<state name="jatim-" colour="red"><point lat="-7.88786" lng="114.43831"/>
+<state name="jatim-" colour="green"><point lat="-7.88786" lng="114.43831"/>
 <point lat="-7.81225" lng="114.4399"/>
 <point lat="-7.77402" lng="114.41168"/>
 <point lat="-7.75211" lng="114.35324"/>

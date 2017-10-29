@@ -8,8 +8,7 @@
 	$xml=simplexml_load_file("jakarta.xml") or die("Error: Cannot create object");
 	$xml->formatOutput = true;
 	$color_set="";
-	for ($i=0; $i<4 ; $i++) { 
-		
+	for ($i=0; $i<5 ; $i++) { 
 		if(${'status'.$i}=="danger"){
 			$color_set="red";
 		}else if(${'status'.$i}=="warning"){
@@ -17,6 +16,7 @@
 		}else{
 			$color_set="green";
 		}
+
 		$xml->state[$i]['colour']=$color_set;
 	}
 	

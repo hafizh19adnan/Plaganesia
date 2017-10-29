@@ -43,57 +43,36 @@
       </div>
     </div>
   </div> 
- 
+  <h4 class="center">Status Nasional : <strong>AMAN</strong></h4>
     <br><br>
      <div class="container">
        <div id="squares">
           <div id="pengidap" class="red lighten-1">             
               <p>Jumlah Kasus</p>
-              <h2>12345</h2>
+              <h2>{{$case}}</h2>
           </div>
           <div id="mean_pengidap" class="orange lighten-1">
               <p>Jumlah Suspect</p>
-              <h2>20</h2>
+              <h2>{{$suspect}}</h2>
           </div>
           <div id="modus_pengidap" class="green accent-2">
               <p>Rata-Rata Usia Pengidap</p>
-              <h2>20</h2>
+              <h2>{{$mean_umur}}</h2>
           </div>
           <div id="margin_of_error" class="cyan">
              <p>Case Fatality Rate</p>
-              <h2>0.5%</h2>
+              <h2><?php echo number_format((float)$cfr, 1, '.', '') ?>%</h2>
           </div>
           <div id="5" class="deep-purple lighten-2">
              <p>Case Proportional Rate</p>
-              <h2>50%</h2>
+              <h2><?php echo number_format((float)$cpr, 1, '.', '') ?>%</h2>
           </div>
         </div>
     
       <div class="section">
         <div class="row">
         <div class="col s12">
-          <div class="center">
-            <br>
-            <h5 class="header">Detail Survey</h5><hr>
-            <div class="col s6 left-align">
-             Nama
-            </div>
-            <div class="col s6 left-align">
-              Survey Nasional Penyebaran DBD Agustus 2017
-             </div>
-            <div class="col s6 left-align">
-             Waktu
-            </div>
-            <div class="col s6 left-align">
-              10 Januari 2017 hingga 10 Januari 2018
-            </div>
-            <div class="col s6 left-align">
-             Jumlah Responden
-            </div>
-            <div class="col s6 left-align">
-            1234
-            </div>
-          </div><br><br><br><br>
+          <br><br><br><br>
           <div class="center">
             <h5 class="header">Data Pengidap DBD Semua Provinsi</h5><hr>
             <table class="striped centered">
@@ -118,34 +97,78 @@
               </tbody>
             </table>
           </div>
-
-          <h5 class="header center">Rekomendasi</h5><hr>
-            <div class="rekomendasi">
-              <div class="col m4">
-                <img src="asset/img/card-2.png" style="height: 130px;" class="responsive-img">
-              </div>
-              <div class="col m8">
-                <h5>Fogging</h5>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-              </div>
-            </div>
-            <div class="rekomendasi">
-              <div class="col m4">
-                <img src="asset/img/card-2.png" style="height: 130px;" class="responsive-img">
-              </div>
-              <div class="col m8">
-                <h5>Fogging</h5>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-              </div>
-            </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="container">
+      <h5 class="header center" >Rekomendasi Tindakn</h5><hr/>
+      <div class="rekomendasi">
+        <br>
+        <div class="row">
+          <div class="col s4">
+           <img src="asset/img/card-2.png" style="width: 400px;" class="responsive-img">
+        </div>
+        <div class="col s8">
+          <h5 class="header"><strong>Fogging</strong></h5>
+          <p style="text-align: justify;">Lorem ipsum dolor sit amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores</p>
+          <p><strong>Rujukan : UU No. 11 Tahun 2001</strong></p>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col s4">
+           <img src="asset/img/card-2.png" style="width: 400px;" class="responsive-img">
+        </div>
+        <div class="col s8">
+          <h5 class="header"><strong>Pemberian Bubuk Abate</strong></h5>
+          <p style="text-align: justify;">Lorem ipsum dolor sit amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores</p>
+          <p><strong>Rujukan : UU No. 11 Tahun 2001</strong></p>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col s4">
+           <img src="asset/img/card-2.png" style="width: 400px;" class="responsive-img">
+        </div>
+        <div class="col s8">
+          <h5 class="header"><strong>Memberi Himbauan Masyarakat</strong></h5>
+          <p style="text-align: justify;">Lorem ipsum dolor sit amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores</p>
+          <p><strong>Rujukan : UU No. 11 Tahun 2001</strong></p>
+        </div>
+        </div>
+        
+
+
+
+      </div>
+    </div>
+  </div>
+    <!-- 
+    <h5 class="header center">Rekomendasi</h5><hr>
+            <div class="rekomendasi">
+              <div class="col m4">
+                <img src="asset/img/card-2.png" style="height: 130px;" class="responsive-img">
+              </div>
+              <div class="col m8">
+                <h5>Fogging</h5>
+                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
+                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
+                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
+              </div>
+            </div>
+            <div class="rekomendasi">
+              <div class="col m4">
+                <img src="asset/img/card-2.png" style="height: 130px;" class="responsive-img">
+              </div>
+              <div class="col m8">
+                <h5>Fogging</h5>
+                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
+                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
+                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
+              </div>
+            </div>
+          </div> -->
+     
  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=AIzaSyBfMIBkwmYD4dz9xcRPRufpL235yCQ7fl8" type="text/javascript"></script>
   
   <script type="text/javascript">
