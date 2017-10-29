@@ -212,7 +212,7 @@ class baseController extends Controller
         if($cfr>=50 || $cpr>=100){
             $nat_status="Bahaya";
             $nat_color = "red";
-        }else if($cfr>=50 || $cpr>=80){
+        }else if($cfr>=40 || $cpr>=80){
             $nat_status="Warning";
             $nat_color = "yellow";
         }else{
