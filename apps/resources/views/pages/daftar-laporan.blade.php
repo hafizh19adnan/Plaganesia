@@ -31,26 +31,21 @@
               <thead>
                 <tr>
                     <th>Nama</th>
+                    <th>Alamat</th>
                     <th>Kabupaten</th>
                     <th>Laporan</th>
                 </tr>
               </thead>
               <tbody>
+                @foreach($list_laporan as $laporan)
                 <tr>
-                  <td>Joni The Cat</td>
-                  <td>Jakarta Selatan</td>
-                  <td>Meong... *minta makan*</td>
+                  <td>{{$laporan->nama_pelapor}}</td>
+                   <td>{{$laporan->alamat}}</td>
+                  <td>{{$laporan->id_kabupaten}}</td>
+                  <td>{{$laporan->isi}}</td>
                 </tr>
-                <tr>
-                  <td>Joni The Cat</td>
-                  <td>Jakarta Selatan</td>
-                  <td>Meong... *minta makan*</td>
-                </tr>
-                <tr>
-                  <td>Joni The Cat</td>
-                  <td>Jakarta Selatan</td>
-                  <td>Meong... *minta makan*</td>
-                </tr>
+                @endforeach
+               
               </tbody>
             </table>
           </div>

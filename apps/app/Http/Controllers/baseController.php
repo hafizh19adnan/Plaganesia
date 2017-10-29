@@ -21,10 +21,9 @@ class baseController extends Controller
         if($request->session()->has('users')){
              if($request->session()->has('gov')){
                 return redirect('dashboard-pemerintah');
-             }else{
-                return redirect('dashboard-surveyor');
+             }else if($request->session()->has('survey')){
+                return redirect('list-survey');
              }
-            
         }else{
            return view("pages.home");
         }  
@@ -54,17 +53,40 @@ class baseController extends Controller
         return view("pages.public-info");
     }
 
-    public function dashboard_gov(){
-        $status0="danger";
-        $status1="danger";
-        $status2="danger";
-        $status3="danger";
-        $status4="danger";
-        $status5="danger";
-        $status6="danger";
-        $status7="danger";
 
-        return view("pages.dashboard-gov",['status0'=>$status0,'status1'=>$status1,'status2'=>$status2,'status3'=>$status3,'status4'=>$status4,'status5'=>$status5,'status6'=>$status6,'status7'=>$status7]);
+
+    public function dashboard_gov(){
+
+        $status0="safe";
+        $status1="safe";
+        $status2="safe";
+        $status3="safe";
+        $status4="safe";
+        $status5="safe";
+        $status6="safe";
+        $status7="safe";
+
+        // MEAN UMUR
+        $count_umur = DB::table('sample')->where('is_sakit',1)->count('umur');
+        $sum_umur = DB::table('sample')->where('is_sakit',1)->sum('umur');
+        $mean_umur=$sum_umur/$count_umur;
+
+        //COUNT SUSPECT
+        $suspect = DB::table('sample')->where('is_sakit',0)->count('umur');
+        $case_total = DB::table('sample')->where('is_sakit',1)->count('umur');
+
+        //COUNT PROPORTIONAL RATE
+        $case_present = DB::table('sample')->whereRaw("is_sakit=1 and tgl_data <= '2017/10/10' AND tgl_data >= '2017/09/10'")->count('umur');
+        $comparator = $case = DB::table('sample')->whereRaw("is_sakit=1 and tgl_data < '2017/09/10' AND tgl_data >= '2017/08/10'")->count('umur');
+        if($comparator==0)$comparator=1;
+        $cpr = ($case_present-$comparator)/$comparator*100;
+
+        //COUNT FATALITY RATE
+        $fatal_present =DB::table('sample')->whereRaw("is_meninggal=1 and tgl_data <= '2017/10/10' AND tgl_data >= '2017/09/10'")->count('umur');
+        $fatal_comparator = DB::table('sample')->whereRaw("is_meninggal=1 and tgl_data < '2017/09/10' AND tgl_data >= '2017/08/10'")->count('umur');
+        if($fatal_comparator==0)$fatal_comparator=1;
+        $cfr = ($fatal_present-$fatal_comparator)/$fatal_comparator*100;
+        return view("pages.dashboard-gov",['status0'=>$status0,'status1'=>$status1,'status2'=>$status2,'status3'=>$status3,'status4'=>$status4,'status5'=>$status5,'status6'=>$status6,'status7'=>$status7,'mean_umur'=>intval($mean_umur),'suspect'=>$suspect,'cpr'=>$cpr,'case'=>$case_total,'cfr'=>$fatal_comparator]);
     }
 
     public function login(){
@@ -72,20 +94,23 @@ class baseController extends Controller
     }
 
     public function daftarLaporan() {
-        return view("pages.daftar-laporan");
+        $list_laporan = DB::table('laporan')->get();
+        return view("pages.daftar-laporan",['list_laporan'=>$list_laporan]);
     }
 
     public function daftarSurvey() {
-        return view("pages.daftar-survey");
+        $list_survey = DB::table('survey')->get();
+        return view("pages.daftar-survey",['list_survey'=>$list_survey]);
     }
    
     public function buatSurvey() {
+
         $provinsis = DB::table('provinsi')->get();
         $kabupatens = DB::table('kabupaten')->get();
         $penyakits = DB::table('penyakit')->get();
         return view('pages.survey', ['provinsis'=>$provinsis, 'kabupatens'=>$kabupatens, 'penyakits'=>$penyakits]);
 
-    } 
+    }
 
     public function isiSurvey() {
         return view("pages.isi-survey");
@@ -98,21 +123,26 @@ class baseController extends Controller
     public function loginAction(Request $request){
         $username = $request->input('username');
         $password = $request->input('password');
-        $account=DB::table('account')->where('username',$username)->count();
+        $account_gov=DB::table('account')->where('username',$username)->where('role',1)->count();
+        $account_survey=DB::table('account')->where('username',$username)->where('role',2)->count();
         $passwordDB=DB::table('account')->where('username',$username)->value('password');
-        $role=DB::table('account')->where('username',$username)->value('role');
-
-
-        if($account==1 && $passwordDB==$password && $role="1"){
-            $request->session()->put('users', '$username');
-            $request->session()->put('gov', '$username');
-            return redirect('dashboard-gov');
-        }else if($account==1 && $passwordDB==$password && $role="2"){
-            $request->session()->put('users', '$username');
-            return redirect('dashboard-surveyor');
+        if($account_gov==1 && $passwordDB==$password){
+            $request->session()->put('username',$username);
+            $request->session()->put('gov',$username);
+            return redirect("/dashboard-gov");
         }else{
-            return redirect('login');
+            if($account_survey==1 && $passwordDB==$password){
+                $request->session()->put('username',$username);
+                $request->session()->put('survey',$username);
+                return redirect("/dashboard-surveyor");
+            }else{
+                return redirect("/login");
+            }
+           
         }
+
+
+        
     }
     public function logout(Request $request){
         $request->session()->flush();
@@ -121,10 +151,10 @@ class baseController extends Controller
     public function jakarta_gov(Request $request){
         $status0="danger";
         $status1="danger";
-        $status2="warning";
+        $status2="safe";
         $status3="safe";
-       
-        return view("pages.gov-jakarta",['status0'=>$status0,'status1'=>$status1,'status2'=>$status2,'status3'=>$status3]);
+        $status4="safe";
+        return view("pages.gov-jakarta",['status0'=>$status0,'status1'=>$status1,'status2'=>$status2,'status3'=>$status3,'status4'=>$status4]);
     }
 
     public function tambahSurvey(Request $request) {
