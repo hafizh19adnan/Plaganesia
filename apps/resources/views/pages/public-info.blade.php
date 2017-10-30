@@ -1,9 +1,18 @@
 @extends('layouts.default')
 @section('content')
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=222652828223133';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div class="section row" style="margin-top: -2%;">
+
         <div id="map" style="width: 100%; height: 600px"></div>
 
-  </div>
+</div>
 
   <div class="container" style="position:absolute; left:21px; top:115px;">
     <div class="center row">
@@ -28,12 +37,19 @@
   </div>
 
   <br>
+
+
+  <!-- Your share button code -->
+
   <div class="container">
     
     <!-- START CONTENT -->
     <section id="content">
       <div class="row center">
-        <h4 class="grey-text text-darken-2">STATUS WABAH DEMAM BERDARAH NASIONAL</h4>
+        <h4 class="grey-text text-darken-2">STATUS WABAH DEMAM BERDARAH NASIONAL</h4><br>
+        <img src="asset/img/facebook.jpg" style="height: 30px;" />
+        <img src="asset/img/twitter.png" style="height: 30px;" />
+        <br><br>
         <!--card stats start-->
         <div id="card-stats">
             <div class="row center">
