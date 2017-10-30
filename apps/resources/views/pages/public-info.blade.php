@@ -33,7 +33,7 @@
     <!-- START CONTENT -->
     <section id="content">
       <div class="row center">
-        <h4 class="grey-text text-darken-2">SURVEY DEMAM BERDARAH PROVINSI JAWA BARAT OKTOBER 2017</h4>
+        <h4 class="grey-text text-darken-2">STATUS WABAH DEMAM BERDARAH NASIONAL</h4>
         <!--card stats start-->
         <div id="card-stats">
             <div class="row center">
