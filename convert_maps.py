@@ -1,4 +1,3 @@
-
 nama_daerah=input("Masukan Nama Daerah : ")
 input_=input()
 file_xml = open(nama_daerah+".xml","a")

@@ -102,33 +102,51 @@
               </tbody>
             </table>
           </div>
-
-          <h5 class="header center">Rekomendasi</h5><hr>
-            <div class="rekomendasi">
-              <div class="col m4">
-                <img src="asset/img/card-2.png" style="height: 130px;" class="responsive-img">
-              </div>
-              <div class="col m8">
-                <h5>Fogging</h5>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-              </div>
-            </div>
-            <div class="rekomendasi">
-              <div class="col m4">
-                <img src="asset/img/card-2.png" style="height: 130px;" class="responsive-img">
-              </div>
-              <div class="col m8">
-                <h5>Fogging</h5>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-              </div>
-            </div>
         </div>
       </div>
     </div>
+    <div class="row">
+    <div class="container">
+      <h5 class="header center" >Rekomendasi Tindakan</h5><hr/>
+      <div class="rekomendasi">
+        <br>
+        <div class="row">
+          <div class="col s4">
+           <img src="asset/img/card-2.png" style="width: 400px;" class="responsive-img">
+        </div>
+        <div class="col s8">
+          <h5 class="header"><strong>Fogging</strong></h5>
+          <p style="text-align: justify;">Lorem ipsum dolor sit amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores</p>
+          <p><strong>Rujukan : UU No. 11 Tahun 2001</strong></p>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col s4">
+           <img src="asset/img/card-2.png" style="width: 400px;" class="responsive-img">
+        </div>
+        <div class="col s8">
+          <h5 class="header"><strong>Pemberian Bubuk Abate</strong></h5>
+          <p style="text-align: justify;">Lorem ipsum dolor sit amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores</p>
+          <p><strong>Rujukan : UU No. 11 Tahun 2001</strong></p>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col s4">
+           <img src="asset/img/card-2.png" style="width: 400px;" class="responsive-img">
+        </div>
+        <div class="col s8">
+          <h5 class="header"><strong>Memberi Himbauan Masyarakat</strong></h5>
+          <p style="text-align: justify;">Lorem ipsum dolor sit amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores</p>
+          <p><strong>Rujukan : UU No. 11 Tahun 2001</strong></p>
+        </div>
+        </div>
+        
+
+
+
+      </div>
+    </div>
+  </div></div>
   </div>
  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=AIzaSyBfMIBkwmYD4dz9xcRPRufpL235yCQ7fl8" type="text/javascript"></script>
   

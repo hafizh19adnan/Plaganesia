@@ -80,7 +80,8 @@
                 <tr>
                     <th>Provinsi</th>
                     <th>Jumlah Penderita</th>
-                    <th>Persentase</th>
+                    <th>Perentase</th>
+                    <th>Detail</th>
                 </tr>
               </thead>
               <tbody>
@@ -88,6 +89,7 @@
                   <td>DKI Jakarta</td>
                   <td>1000</td>
                   <td>0.1%</td>
+                  <td><a href="dashboard-gov-jakarta">View Detail</a></td>
                 </tr>
                 <tr>
                   <td>Jawa Tengah</td>
