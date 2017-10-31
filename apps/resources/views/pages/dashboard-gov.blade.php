@@ -72,33 +72,65 @@
       <div class="section">
         <div class="row">
         <div class="col s12">
-          <br><br><br><br>
+          <br>
+          </table><br>
           <div class="center">
-            <h5 class="header">Data Pengidap DBD Semua Provinsi</h5><hr>
-            <table id="example" class="mdl-data-table striped centered" >
-              <thead>
-                <tr>
-                    <th>Provinsi</th>
-                    <th>Jumlah Penderita</th>
-                    <th>Perentase</th>
-                    <th>Detail</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>DKI Jakarta</td>
-                  <td>1000</td>
-                  <td>0.1%</td>
-                  <td><a href="dashboard-gov-jakarta">View Detail</a></td>
-                </tr>
-                <tr>
-                  <td>Jawa Tengah</td>
-                  <td>1000</td>
-                  <td>0.1%</td>
-                </tr>
-              </tbody>
-            </table>
+            <h5><strong>Data Wabah Demam Berdarah Nasional Per Provinsi</strong></h5><br>
           </div>
+          
+          <table class="striped">
+            <thead>
+              <th>Provinsi</th>
+              <th>Jumlah Kasus</th>
+              <th>Jumlah Suspect</th>
+              <th>Status</th>
+              <th>Action</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>DKI Jakarta</td>
+                <td>1264</td>
+                <td>134</td>
+                <td>Bahaya</td>
+                <td><a href="dashboard-gov-jakarta"> View Detail</a></td>
+              </tr>
+              <tr>
+                <td>Banten</td>
+                <td>12434</td>
+                <td>134</td>
+                <td>Bahaya</td>
+                   <td><a href="#"> View Detail</a></td>
+              </tr>
+              <tr>
+                <td>Jawa Barat</td>
+                <td>13452</td>
+                <td>134</td>
+                <td>Bahaya</td>
+                 <td><a href="#" > View Detail</a></td>
+              </tr>
+              <tr>
+                <td>Jawa Tengah</td>
+                <td>1264</td>
+                <td>134</td>
+                <td>Bahaya</td>
+                 <td><a href="#" > View Detail</a></td>
+              </tr>
+              <tr>
+                <td>Jawa Timur</td>
+                <td>1264</td>
+                <td>134</td>
+                <td>Bahaya</td>
+                 <td><a href="#" > View Detail</a></td>
+              </tr>
+              <tr>
+                <td>Yogyakarta</td>
+                <td>126445</td>
+                <td>134</td>
+                <td>Bahaya</td>
+                 <td><a href="#" > View Detail</a></td>
+              </tr>
+            </tbody>
+          </table><br>
         </div>
       </div>
     </div>
@@ -145,32 +177,7 @@
       </div>
     </div>
   </div>
-    <!-- 
-    <h5 class="header center">Rekomendasi</h5><hr>
-            <div class="rekomendasi">
-              <div class="col m4">
-                <img src="asset/img/card-2.png" style="height: 130px;" class="responsive-img">
-              </div>
-              <div class="col m8">
-                <h5>Fogging</h5>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-              </div>
-            </div>
-            <div class="rekomendasi">
-              <div class="col m4">
-                <img src="asset/img/card-2.png" style="height: 130px;" class="responsive-img">
-              </div>
-              <div class="col m8">
-                <h5>Fogging</h5>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-                  -Permenkes No. 12 Tahun 2015 Tentang Penanggulangan Penyakit Menular<br>
-              </div>
-            </div>
-          </div> -->
-     
+   
  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=AIzaSyBfMIBkwmYD4dz9xcRPRufpL235yCQ7fl8" type="text/javascript"></script>
   
   <script type="text/javascript">

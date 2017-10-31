@@ -70,42 +70,69 @@
               <h3><?php echo number_format((float)$cpr, 1, '.', '') ?>%</h3>
           </div>
         </div>
+
     
-      <div class="section">
+       <div class="section">
         <div class="row">
         <div class="col s12">
+          <br>
+          </table><br>
           <div class="center">
-            <br>
-            
-          </div><br><br><br><br>
-          <div class="center">
-            <h5 class="header">Data Pengidap DBD Semua Provinsi</h5><hr>
-            <table class="striped centered">
-              <thead>
-                <tr>
-                    <th>Provinsi</th>
-                    <th>Jumlah Penderita</th>
-                    <th>Persentase</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>DKI Jakarta</td>
-                  <td>1000</td>
-                  <td>0.1%</td>
-                </tr>
-                <tr>
-                  <td>Jawa Tengah</td>
-                  <td>1000</td>
-                  <td>0.1%</td>
-                </tr>
-              </tbody>
-            </table>
+            <h5><strong>Data Wabah Demam Berdarah Per Kabupaten/Kota di DKI Jakarta</strong></h5><br>
           </div>
+          
+          <table class="striped">
+            <thead>
+              <th>Provinsi</th>
+              <th>Jumlah Kasus</th>
+              <th>Jumlah Suspect</th>
+              <th>Status</th>
+              <th>Action</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Jakarta Pusat</td>
+                <td>1264</td>
+                <td>134</td>
+                <td>Bahaya</td>
+                <td><a href="dashboard-gov-jakarta"> View Detail</a></td>
+              </tr>
+              <tr>
+                <td>Jakarta Utara</td>
+                <td>12434</td>
+                <td>134</td>
+                <td>Bahaya</td>
+                   <td><a href="#"> View Detail</a></td>
+              </tr>
+              <tr>
+                <td>Jakarta Barat</td>
+                <td>13452</td>
+                <td>134</td>
+                <td>Bahaya</td>
+                 <td><a href="#" > View Detail</a></td>
+              </tr>
+              <tr>
+                <td>Jakarta Timur</td>
+                <td>1264</td>
+                <td>134</td>
+                <td>Bahaya</td>
+                 <td><a href="#" > View Detail</a></td>
+              </tr>
+              <tr>
+                <td>Jakarta Selatan</td>
+                <td>1264</td>
+                <td>134</td>
+                <td>Bahaya</td>
+                 <td><a href="#" > View Detail</a></td>
+              </tr>
+              
+            </tbody>
+          </table><br>
         </div>
       </div>
     </div>
-    <div class="row">
+  </div>
+  <div class="row">
     <div class="container">
       <h5 class="header center" >Rekomendasi Tindakan</h5><hr/>
       <div class="rekomendasi">
@@ -146,7 +173,6 @@
 
       </div>
     </div>
-  </div></div>
   </div>
  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=AIzaSyBfMIBkwmYD4dz9xcRPRufpL235yCQ7fl8" type="text/javascript"></script>
   

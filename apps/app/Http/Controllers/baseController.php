@@ -269,4 +269,8 @@ class baseController extends Controller
         $panduan = $survey->value('panduan');
         return view("pages.panduan-survey", ['id' => $id, 'nama' => $nama, 'tgl_mulai' => $tgl_mulai, 'tgl_selesai'=> $tgl_selesai,  'panduan'=>$panduan]);
     }
+
+    public function detail_rekomendasi(){
+        return view("pages.detail-rekomendasi");
+    }
 }

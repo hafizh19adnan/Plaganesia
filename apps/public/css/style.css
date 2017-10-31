@@ -119,3 +119,9 @@ footer.page-footer {
   margin: 0;
 }
 
+#header-recomendation{
+  background: url('../asset/img/fogging.jpg') no-repeat fixed;
+  background-size: cover;
+  padding: 40px 0px 40px 0px;
+
+}

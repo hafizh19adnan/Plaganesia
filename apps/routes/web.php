@@ -32,6 +32,4 @@ Route::get('/dashboard-gov-jakarta','baseController@jakarta_gov');
 Route::post('/tambahSurvey', 'baseController@tambahSurvey');
 Route::get('/panduan-survey', 'baseController@panduanSurvey');
 Route::post('/isi-sampel', 'baseController@isiSampel');
-
-
-
+Route::get('/detail-rekomendasi','baseController@detail_rekomendasi');
