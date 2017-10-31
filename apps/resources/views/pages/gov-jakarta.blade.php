@@ -139,32 +139,65 @@
         <br>
         <div class="row">
           <div class="col s4">
-           <img src="asset/img/card-2.png" style="width: 400px;" class="responsive-img">
+           <img src="asset/img/fogging-nyamuk.jpg" style="width: 400px;" class="responsive-img">
         </div>
         <div class="col s8">
           <h5 class="header"><strong>Fogging</strong></h5>
-          <p style="text-align: justify;">Lorem ipsum dolor sit amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores</p>
-          <p><strong>Rujukan : UU No. 11 Tahun 2001</strong></p>
+          <div class="row">
+            <div class="col s12">
+              <p><strong>Progress : </strong>7 dari 10 kecamatan</p>
+            </div>
+            <div class="col s12">
+              <div class="progress" style=" height: 21px;">
+                  <div class="determinate" style="width: 70%;"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <a class="btn green" href="detail-rekomendasi">Detail</a>
+          </div>
         </div>
         </div>
         <div class="row">
           <div class="col s4">
-           <img src="asset/img/card-2.png" style="width: 400px;" class="responsive-img">
+           <img src="asset/img/abate.jpg" style="width: 400px;" class="responsive-img">
         </div>
         <div class="col s8">
           <h5 class="header"><strong>Pemberian Bubuk Abate</strong></h5>
-          <p style="text-align: justify;">Lorem ipsum dolor sit amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores</p>
-          <p><strong>Rujukan : UU No. 11 Tahun 2001</strong></p>
+          <div class="row">
+            <div class="col s12">
+              <p><strong>Progress : </strong>7 dari 10 kecamatan</p>
+            </div>
+            <div class="col s12">
+              <div class="progress" style=" height: 21px;">
+                  <div class="determinate" style="width: 70%;"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <a class="btn green" href="detail-rekomendasi">Detail</a>
+          </div>
         </div>
         </div>
         <div class="row">
           <div class="col s4">
-           <img src="asset/img/card-2.png" style="width: 400px;" class="responsive-img">
+           <img src="asset/img/himbauan.png" style="width: 400px;" class="responsive-img">
         </div>
         <div class="col s8">
           <h5 class="header"><strong>Memberi Himbauan Masyarakat</strong></h5>
-          <p style="text-align: justify;">Lorem ipsum dolor sit amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores  amet conectetum ajinivc. Vivat Academia vivat profesores</p>
-          <p><strong>Rujukan : UU No. 11 Tahun 2001</strong></p>
+          <div class="row">
+            <div class="col s12">
+              <p><strong>Progress : </strong>7 dari 10 kecamatan</p>
+            </div>
+            <div class="col s12">
+              <div class="progress" style=" height: 21px;">
+                  <div class="determinate" style="width: 70%;"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <a class="btn green" href="detail-rekomendasi">Detail</a>
+          </div>
         </div>
         </div>
         
