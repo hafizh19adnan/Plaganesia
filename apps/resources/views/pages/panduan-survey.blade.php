@@ -13,7 +13,17 @@
 
       <div class="card">
         <div class="card-content">
-          <p>{{$panduan}}</p>
+          <p>
+            
+    1. Wajib menjunjung tinggi Falsafah dan UUD negara <br>
+    2. Harus memiliki kesadaran integritas Nasional <br>
+    3. Setiap saat, dalam kedudukan apapun hendaknya berperilaku terpuji, sehingga dengan demikian menjunjung kehormatan profesi surveyor indonesia <br>
+    4. Harus yakin akan kebenaran dan kecukupan tentang data dan informasi yang ia sajikan <br>
+    5. Harus yakin akan kebenaran dan kecukupan tentang metoda, sarana dan tenaga, yang ia pergunakan dalam pengumpulan data informasi, dalam pengolahan serta penyajiannya <br>
+    6. Harus yakin akan kebenaran dan kecukupan tentang metoda, sarana dan tenaga, yang ia pergunakan dalam menilai kegiatan pengumpulan data / informasi, pengolahan dan penyajiannya <br>
+    7. Hendaknya memberikan penghargaan yang layak terhadap orang lain dan/atau perusahaan atas sumbangan profesionalnya. <br>
+
+          </p>
         </div>
       </div>
   </div>
